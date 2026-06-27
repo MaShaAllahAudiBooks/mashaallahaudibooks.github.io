@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaShaAllah AudiBooks | ইসলামিক বই, অডিওবুক, PDF, E-Book ও অফার</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #0f4f3f;
+      --green-dark: #0b3b30;
+      --green-soft: #1f6b58;
+      --gold: #d6a63a;
+      --text: #183028;
+      --muted: #5d6d66;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+      --container: 1320px;
+      --blue: #1d4ed8;
+      --purple: #7c3aed;
+      --orange: #ea580c;
+      --highlight: #fff7db;
+      --highlight-border: #f0c54d;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f5f7f6;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--container), 94%); margin: 0 auto; }
+
+    /* Top Navigation bar */
+    .topbar {
+      background: #fff; position: sticky; top: 0; z-index: 50;
+      box-shadow: 0 2px 18px rgba(0,0,0,.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-logo {
+      width: 58px; height: 58px; border-radius: 14px; overflow: hidden; flex: 0 0 auto; background: #fff;
+      box-shadow: var(--shadow); border: 1px solid #e6ece9; display: flex; align-items: center; justify-content: center; padding: 4px;
+    }
+    .brand-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+    .brand-text h1 { margin: 0; font-size: 28px; line-height: 1.05; color: var(--green-dark); }
+    .brand-text p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+
+    .menu {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end;
+    }
+    .menu a {
+      padding: 10px 14px; border-radius: 12px; color: var(--green-dark); font-weight: 600; transition: .2s ease;
+    }
+    .menu a:hover { background: #eef5f2; }
+    .yt-btn {
+      background: var(--green); color: #fff !important; padding: 12px 18px !important; box-shadow: var(--shadow);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.94);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .hero {
+      position: relative; overflow: hidden;
+      /* Applying image_d7c2a2.png directly as the backdrop with premium color overlay blending */
+      background:
+        linear-gradient(90deg, rgba(6,38,30,.92) 0%, rgba(8,44,35,.82) 45%, rgba(8,44,35,.5) 75%, rgba(8,44,35,.15) 100%),
+        url('image_d7c2a2.png') center/cover no-repeat;
+      color: #fff; min-height: 520px; display: flex; align-items: center;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 30px; align-items: center; padding: 60px 0;
+    }
+    .hero-content { 
+      max-width: 760px; 
+      /* Triggering high performance slower CSS animation on load for visibility */
+      animation: fadeInUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .hero h2 {
+      margin: 0 0 16px; font-size: clamp(34px, 4.5vw, 60px); line-height: 1.1; letter-spacing: -.5px;
+    }
+    .hero h2 .accent { color: var(--gold); }
+    .hero p.lead {
+      font-size: clamp(16px, 1.8vw, 24px); margin: 0 0 16px; color: #f3f3f3; font-weight: 600;
+    }
+    .hero p.desc { margin: 0 0 28px; color: #e7ecea; font-size: 18px; max-width: 680px; }
+    
+    /* Compact horizontal hero actions styling */
+    .hero-actions { 
+      display: flex !important; 
+      flex-direction: row !important;
+      flex-wrap: wrap; 
+      gap: 12px !important; 
+      margin-top: 24px; 
+    }
+    .hero-actions .btn {
+      width: auto !important;
+      padding: 10px 18px !important;
+      font-size: 14px !important;
+      border-radius: 12px !important;
+      min-height: auto !important;
+    }
+    .hero-spacer { min-height: 300px; }
+
+    /* Button styles with dynamic tactile hover & active press effects */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 16px; border-radius: 14px; font-weight: 700;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+      box-shadow: var(--shadow); border: none; cursor: pointer; font-size: 15px; text-align: center; width: 100%;
+      will-change: transform;
+    }
+    .btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 14px 28px rgba(15, 79, 63, 0.15);
+    }
+    .btn:active {
+      transform: translateY(1px) scale(0.97);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    .btn-primary { background: var(--green-soft); color: #fff; }
+    .btn-primary:hover { background: var(--green); }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #b08125; }
+    .btn-blue { background: var(--blue); color: #fff; }
+    .btn-blue:hover { background: #1d4ed8; }
+    .btn-purple { background: var(--purple); color: #fff; }
+    .btn-purple:hover { background: #5b21b6; }
+    .btn-orange { background: var(--orange); color: #fff; }
+    .btn-orange:hover { background: #c2410c; }
+
+    .menu a:hover { background: #eef5f2; }
+    
+    /* Premium hover styles for YouTube top header button */
+    .yt-btn {
+      background: var(--green); color: #fff !important; padding: 12px 18px !important; box-shadow: var(--shadow);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+      will-change: transform;
+    }
+    .yt-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      background: var(--green-soft);
+      box-shadow: 0 12px 20px rgba(15, 79, 63, 0.2);
+    }
+    .yt-btn:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    section { padding: 70px 0; }
+    .section-head { text-align: center; margin-bottom: 34px; }
+    .section-head h3 { margin: 0; font-size: 40px; color: var(--green-dark); line-height: 1.15; }
+    .section-head p { margin: 10px auto 0; max-width: 900px; color: var(--muted); font-size: 18px; }
+    .divider {
+      width: 90px; height: 4px; border-radius: 999px; margin: 14px auto 0;
+      background: linear-gradient(90deg,var(--green),var(--gold));
+    }
+
+    .promo-card {
+      flex: 0 0 calc((100% - 66px) / 4);
+      background: #fff; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+      border: 1px solid #edf2ef; display: flex; flex-direction: column; gap: 12px;
+      min-width: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .promo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(15, 79, 63, 0.12);
+    }
+    .promo-icon {
+      width: 70px; height: 70px; border-radius: 18px; display: grid; place-items: center;
+      background: linear-gradient(135deg,#eaf5f1,#f7fbf9); color: var(--green); font-size: 30px; border: 1px solid #e1ece7;
+    }
+    .promo-card h4 { margin: 0; font-size: 28px; color: var(--green-dark); line-height: 1.15; }
+    .promo-card .label { color: var(--muted); font-weight: 600; font-size: 16px; }
+    .promo-card p { margin: 0; color: #44524c; font-size: 16px; line-height: 1.7; }
+    .promo-note {
+      background: #fff8e8; border: 1px solid #f1d07a; color: #7a5200;
+      padding: 12px 14px; border-radius: 14px; font-weight: 700; line-height: 1.5; font-size: 15px;
+    }
+
+    /* Resource grids and Sliders */
+    .resource-grid, .why-grid { display: grid; gap: 24px; }
+    .resource-grid { grid-template-columns: repeat(4, 1fr); }
+    .why-grid { grid-template-columns: repeat(4, 1fr); }
+
+    .books { background: linear-gradient(180deg,#f8faf9 0%,#f2f6f4 100%); }
+    .resource-section { background: #fffdf8; }
+    .other-products { background: #f8fafc; }
+
+    .book-row-wrap {
+      position: relative;
+      padding: 0 58px;
+      margin-bottom: 38px;
+    }
+    .books-viewport {
+      overflow: hidden;
+      width: 100%;
+    }
+    .books-slider {
+      display: flex;
+      gap: 22px;
+      transition: transform .42s ease;
+      will-change: transform;
+    }
+
+    /* PREMIUM VERTICALLY ELONGATED CARDS (4-Columns Layout) */
+    .book-card {
+      flex: 0 0 calc((100% - 66px) / 4);
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #ebf0ee;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(15,79,63,0.12);
+    }
+
+    .resource-card, .why-card {
+      background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
+      border: 1px solid #ebf0ee; display: flex; flex-direction: column;
+    }
+
+    .resource-card {
+      flex: 0 0 calc((100% - 66px) / 4);
+      min-width: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .resource-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(124,58,237,0.1);
+    }
+
+    /* ELONGATED BOOK COVER ASPECT RATIO */
+    .book-cover {
+      height: 295px;
+      background-color: #eef3f0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex-shrink: 0;
+      padding: 12px;
+      border-bottom: 1px solid #edf2ef;
+    }
+
+    .book-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .book-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+      color: var(--green-dark);
+      font-weight: 700;
+      min-height: 46px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-desc {
+      margin: 0;
+      color: #41514a;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 42px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-tags, .product-tags {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .tag {
+      background: #eef5f2; color: var(--green-dark); border: 1px solid #dfe9e4;
+      padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
+    }
+
+    /* Auto layout handling system */
+    .auto-link-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: auto;
+    }
+    .auto-link-group.cols-1 { grid-template-columns: 1fr; }
+    .auto-link-group.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .auto-link-group.cols-3 { grid-template-columns: repeat(2, 1fr); }
+    .auto-link-group.cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .auto-link-group .btn {
+      padding: 10px 10px;
+      font-size: 13px;
+      border-radius: 12px;
+      min-height: 42px;
+      line-height: 1.2;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(0,0,0,.14);
+      color: var(--green-dark);
+      font-size: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: .2s ease;
+    }
+    .slider-arrow:hover {
+      transform: translateY(-50%) scale(1.04);
+      background: #f7faf8;
+    }
+    .slider-arrow.prev { left: 0; }
+    .slider-arrow.next { right: 0; }
+
+    .row-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0 0 14px 8px;
+    }
+
+    .resource-body {
+      padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;
+    }
+
+    .resource-title {
+      margin: 0; font-size: 22px; color: var(--green-dark); line-height: 1.2;
+    }
+    .resource-meta { color: var(--muted); font-size: 15px; margin: 0; }
+    .resource-desc {
+      margin: 0; color: #41514a; font-size: 15px; line-height: 1.55;
+    }
+
+    .resource-icon {
+      width: 74px; height: 74px; border-radius: 18px; display: grid; place-items: center;
+      background: linear-gradient(135deg,#eef5ff,#f7fbff); color: var(--blue);
+      font-size: 34px; border: 1px solid #dfe9f8; margin: 24px 24px 0;
+    }
+
+    .resource-top-card {
+      background: linear-gradient(135deg,#f5edff,#fffdf8);
+      border: 1px solid #eadcff;
+      flex: 0 0 calc((100% - 66px) / 4);
+    }
+    .resource-top-card .book-cover {
+      border-bottom: 1px solid #eadcff;
+    }
+
+    /* Sliderized Product Cards */
+    .product-card {
+      flex: 0 0 calc((100% - 66px) / 4);
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #ebf0ee;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(234,88,12,0.1);
+    }
+
+    .product-cover {
+      height: 295px;
+      background: #edf3ef center center/cover no-repeat;
+      flex-shrink: 0;
+    }
+
+    .product-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .product-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+      color: var(--green-dark);
+      font-weight: 700;
+      min-height: 56px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .product-desc {
+      margin: 0;
+      color: #41514a;
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 68px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .product-card .product-tags {
+      margin-top: auto;
+      margin-bottom: 6px;
+    }
+
+    .product-card .auto-link-group {
+      grid-template-columns: 1fr;
+    }
+
+    .product-card .btn {
+      min-height: 44px;
+      font-size: 14px;
+      border-radius: 12px;
+    }
+
+    .why-card { padding: 24px; text-align: center; }
+    .why-icon {
+      width: 84px; height: 84px; border-radius: 999px; margin: 0 auto 16px; display: grid; place-items: center;
+      background: linear-gradient(135deg,#eef6f2,#fff9ee); border: 1px solid #e7ece9; font-size: 36px; color: var(--green);
+    }
+    .why-card h4 { margin: 0 0 10px; font-size: 24px; color: var(--green-dark); }
+    .why-card p { margin: 0; color: #4f5d57; font-size: 16px; }
+
+    .video-wrap {
+      background: #eef5f2; border: 1px solid #dfe9e4; border-radius: 24px; padding: 24px; box-shadow: var(--shadow);
+    }
+    .video-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: stretch; }
+    .video-box { background: #fff; border-radius: 18px; border: 1px solid #e6ece9; overflow: hidden; }
+    .video-embed { position: relative; padding-top: 56.25%; background: #d9e5df; }
+    .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    
+    .playlist-container {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #e6ece9;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .playlist-tabs {
+      display: flex;
+      background: #f1f5f3;
+      border-bottom: 1px solid #e6ece9;
+      padding: 6px;
+      gap: 6px;
+    }
+    .playlist-tabs .tab-btn {
+      flex: 1;
+      padding: 12px 8px;
+      border: none;
+      background: none;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .playlist-tabs .tab-btn.active {
+      background: #fff;
+      color: var(--green);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .playlist-content {
+      display: none;
+      flex: 1;
+      overflow-y: auto;
+      max-height: 380px;
+      padding: 14px;
+    }
+    .playlist-content.active {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #f7faf8;
+      border: 1px solid #e8efeb;
+      font-weight: 600;
+      color: #31433c;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .playlist-item:hover {
+      background: #eef5f2;
+      border-color: var(--green-soft);
+      transform: translateY(-1px);
+    }
+    .playlist-item.active {
+      background: #eef5f2;
+      border-color: var(--green);
+      color: var(--green-dark);
+    }
+    .playlist-item-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+    .playlist-item-meta {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .channel-promo {
+      padding: 16px;
+      background: linear-gradient(135deg, #0f4f3f, #0b3b30);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid #e6ece9;
+    }
+    .channel-promo-text h5 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .channel-promo-text p {
+      margin: 2px 0 0;
+      font-size: 13px;
+      color: #d8efe8;
+    }
+    .yt-subscribe {
+      background: #ef4444 !important;
+      color: #fff !important;
+      width: auto !important;
+      padding: 8px 16px !important;
+      font-size: 14px !important;
+      border-radius: 10px !important;
+    }
+    .yt-subscribe:hover {
+      background: #dc2626 !important;
+    }
+
+    .live-pulse {
+      width: 8px; height: 8px; background: #ef4444; border-radius: 50%;
+      display: inline-block; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      animation: pulse 1.2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    .faq-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+    .faq-box, .note-box {
+      background: #fff; border-radius: 22px; padding: 26px; box-shadow: var(--shadow); border: 1px solid #ebf0ee;
+    }
+    .faq-box h4, .note-box h4 { margin: 0 0 18px; font-size: 30px; color: var(--green-dark); }
+    details {
+      background: #f7faf8; border: 1px solid #e6ece9; border-radius: 16px; padding: 16px 18px; margin-bottom: 12px;
+    }
+    summary {
+      cursor: pointer; font-weight: 700; color: var(--green-dark); font-size: 18px; list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin: 12px 0 0; color: #44524c; font-size: 16px; }
+    .note-box p { margin: 0 0 12px; color: #44524c; font-size: 17px; }
+
+    footer {
+      background: linear-gradient(180deg,var(--green) 0%,var(--green-dark) 100%);
+      color: #fff; padding: 56px 0 24px; margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 30px; align-items: start;
+    }
+    .footer-card h4 { margin: 0 0 14px; font-size: 28px; color: #fff; }
+    .footer-card p, .footer-card li, .footer-card a { color: #e9f1ee; font-size: 16px; }
+    .footer-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .social-brand-list { display: grid; gap: 12px; margin-top: 10px; }
+    .social-brand {
+      display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); transition: .2s ease;
+    }
+    .social-icon {
+      width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex: 0 0 auto; background: rgba(255,255,255,.12); color: #fff;
+    }
+    .social-brand strong { display: block; color: #fff; font-size: 17px; line-height: 1.2; }
+    .social-brand span { display: block; color: #dce8e3; font-size: 13px; margin-top: 2px; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.14); margin-top: 26px; padding-top: 18px;
+      display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; color: #dce8e3; font-size: 15px;
+    }
+
+    .resource-card.is-target {
+      border: 2.5px solid var(--highlight-border) !important;
+      background: var(--highlight);
+      box-shadow: 0 16px 40px rgba(240,197,77,.25), var(--shadow);
+      transform: scale(1.02);
+      transition: .3s ease;
+    }
+
+    .is-hidden { display: none !important; }
+
+    .copy-toast {
+      position: fixed; right: 20px; bottom: 20px; z-index: 9999; min-width: 280px; max-width: 420px;
+      background: #0f4f3f; color: #fff; padding: 14px 16px; border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.18); opacity: 0; visibility: hidden; transform: translateY(16px); transition: .28s ease;
+    }
+    .copy-toast.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .copy-toast strong { display: block; font-size: 16px; margin-bottom: 4px; }
+    .copy-toast span { font-size: 14px; color: #d8efe8; }
+
+    @media (max-width: 1280px) {
+      .book-card, .resource-card, .resource-top-card, .promo-card, .product-card {
+        flex: 0 0 calc((100% - 44px) / 3); /* Scales to 3 columns on standard laptops */
+      }
+      .book-cover { height: 260px; }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-spacer { display: none; }
+      .promo-grid { grid-template-columns: repeat(2, 1fr); }
+      .resource-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .book-card, .resource-card, .resource-top-card, .promo-card, .product-card {
+        flex: 0 0 calc((100% - 22px) / 2); /* Scales to 2 columns on tablets */
+      }
+      .book-cover { height: 230px; }
+      .product-cover { height: 280px; }
+    }
+
+    @media (max-width: 680px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .menu { justify-content: flex-start; }
+      .hero { min-height: auto; }
+      .hero h2 { font-size: 40px; }
+      .hero p.lead { font-size: 20px; }
+      .hero p.desc { font-size: 18px; }
+      .promo-grid, .why-grid, .footer-grid { grid-template-columns: 1fr; }
+      .section-head h3 { font-size: 30px; }
+      .brand-text h1 { font-size: 22px; }
+      .hero-actions { 
+        flex-direction: row !important; 
+        justify-content: flex-start; 
+        gap: 8px !important; 
+      }
+      .resource-grid { grid-template-columns: 1fr; }
+      .book-row-wrap { padding: 0 6px; }
+      .slider-arrow { display: none; }
+      .book-card, .resource-card, .resource-top-card, .promo-card, .product-card {
+        flex: 0 0 100%; /* Full-width single item on mobile screen */
+      }
+      .book-cover { height: 250px; }
+      .product-cover { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjiAQeqNqBRouruDvjWbWln5OvUegxURuSTXPnvz3iLBenOQpIMv3CHQoSqkSdCWwn7-0ThnKARfRhl6ja13LQxwchTUSMoUbMt7402DS2r2WrfcaUKk5EhvKMW0n0Du4k3Wz63U3iuiDk4bS4j05dPkrUsrHGm39V7-jj_VDWeBKZ_VlZ0m5xNuuOaSrM=w640-h640" alt="MaShaAllah AudiBooks Logo">
+        </div>
+        <div class="brand-text">
+          <h1>Mashaallah AudiBooks</h1>
+          <p>ইসলামিক বই, অডিওবুক, PDF, E-Book ও অন্যান্য অফার</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="#home">হোম</a>
+        <a href="#books">বইয়ের তালিকা</a>
+        <a href="#pdfs">PDF</a>
+        <a href="#ebooks">E-Book</a>
+        <a href="#products">অন্যান্য প্রোডাক্ট</a>
+        <a href="#promo">অফার</a>
+        <a href="#videos">ভিডিও</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a class="yt-btn" href="https://www.youtube.com/@MaShaAllah_AudiBooks" target="_blank">▶ YouTube চ্যানেল</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h2>MaShaAllah <span class="accent">AudiBooks</span></h2>
+        <p class="lead">ইসলামিক বই, অডিওবুক, PDF, E-Book ও প্রয়োজনীয় রিসোর্স — সব এক জায়গায়</p>
+        <p class="desc">
+          নবীদের কাহিনী, সিরাত, সাহাবাদের জীবনী, ইতিহাস, ঐতিহ্য, ইসলামিক সংগ্রহ, একাডেমিক বই, ইংরেজি ভাষার বইসহ বাছাইকৃত সেরা ইসলামিক বই, অডিওবুক, PDF, E-Book এবং বইয়ের বাইরে দরকারি অন্যান্য প্রোডাক্ট একসাথে সাজানো আছে।
+        </p>
+        <!-- Horizontal, premium scaled small action buttons -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#books">📖 বই দেখুন</a>
+          <a class="btn btn-blue" href="#pdfs">📄 PDF দেখুন</a>
+          <a class="btn btn-purple" href="#ebooks">📘 E-Book দেখুন</a>
+        </div>
+      </div>
+      <div class="hero-spacer"></div>
+    </div>
+  </section>
+
+  <section id="promo">
+    <div class="container">
+      <div class="section-head">
+        <h3>চলতি অফার / Promo Codes</h3>
+        <div class="divider"></div>
+        <p>বই, অন্যান্য প্রোডাক্ট, অ্যাপ অফার ও বিশেষ ডিলের জন্য promo code এবং direct offer link এখানে দেওয়া আছে। স্লাইড করে আপনার অফারটি বেছে নিন।</p>
+      </div>
+
+      <!-- Sliderized interactive promo section -->
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="promoPrev" aria-label="আগের অফার">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="promoSlider">
+            
+            <div class="promo-card">
+              <div class="promo-icon">📚</div>
+              <div class="label">শুধু বইয়ের জন্য</div>
+              <h4>CHAMPION26</h4>
+              <p>রকমারির বই অর্ডারে এই কোড ব্যবহার করুন।</p>
+              <div class="promo-note">🎉 বইয়ে ৫%+ পর্যন্ত অতিরিক্ত ছাড় পাওয়া যেতে পারে</div>
+              <a class="btn btn-primary promo-copy-btn" href="#books" data-code="CHAMPION26" data-toast="বইয়ের কোড কপি হয়েছে" data-target="#books">কপি করুন</a>
+            </div>
+
+            <div class="promo-card">
+              <div class="promo-icon">🛍️</div>
+              <div class="label">বই ছাড়া অন্যান্য পণ্য</div>
+              <h4>CHAMPION2026</h4>
+              <p>রকমারির অন্যান্য পণ্যে এই কোড ব্যবহার করুন।</p>
+              <div class="promo-note">🎉 ৫%+ পর্যন্ত অতিরিক্ত ছাড় পাওয়া যেতে পারে</div>
+              <a class="btn btn-gold promo-copy-btn" href="#products" data-code="CHAMPION2026" data-toast="প্রোডাক্টের কোড কপি হয়েছে" data-target="#products">কপি করুন</a>
+            </div>
+
+            <div class="promo-card">
+              <div class="promo-icon">🚚</div>
+              <div class="label">রকমারি অ্যাপে প্রথম অর্ডার</div>
+              <h4>APP1ST</h4>
+              <p>অ্যাপ থেকে প্রথম অর্ডারে এই কোড ব্যবহার করুন।</p>
+              <div class="promo-note">🎉 প্রথম অর্ডারে ফ্রী ডেলিভারি পেতে ব্যবহার করুন</div>
+              <a class="btn btn-primary promo-copy-btn" href="https://rkmri.co/Ml2AR5SEye2o/" data-code="APP1ST" data-toast="অ্যাপ অফারের কোড কপি হয়েছে">কপি এবং ভিজিট</a>
+            </div>
+
+            <div class="promo-card">
+              <div class="promo-icon">🎁</div>
+              <div class="label">আজকের অফার</div>
+              <p>রকমারির সকল নির্বাচিত অফার, বিশেষ ডিল ও ক্যাম্পেইন দেখতে নিচের বাটনে ক্লিক করুন।</p>
+              <div class="promo-note">🎉 অতিরিক্ত ছাড় বা বিশেষ অফার পাওয়া যেতে পারে</div>
+              <a class="btn btn-primary" href="https://rkmri.co/eo3ESMRp3A0T/" target="_blank">সব অফার দেখুন</a>
+            </div>
+
+          </div>
+        </div>
+        <button class="slider-arrow next" id="promoNext" aria-label="পরের অফার">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="books" id="books">
+    <div class="container">
+      <div class="section-head">
+        <h3>প্রস্তাবিত বইসমূহ</h3>
+        <div class="divider"></div>
+        <p>সহজে স্ক্রল বা সোয়াইপ করার জন্য প্রতিটি ক্যাটাগরিকে আকর্ষণীয় রেসপনসিভ ৪-কার্ড স্লাইডারে সাজানো হয়েছে।</p>
+      </div>
+
+      <!-- TOP ROW (THE SINGLE SPECIFIC BOOKS GO HERE) -->
+      <h4 class="row-title">সিরাত, নবীদের কাহিনী ও সাহাবিদের জীবনী (নির্দিষ্ট বইসমূহ)</h4>
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="topPrev" aria-label="আগের বই">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="topBooksSlider">
+
+            <!-- Book 1: নবীদের কাহিনী-১ -->
+            <article class="book-card js-book"
+              data-book-id="book-1"
+              data-title="নবীদের কাহিনী-১"
+              data-author="মুহাম্মদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-i5mW0C2ColXPaOthZBX73Aj_FBoDTBB3AtS9VRA_kbZujWYBaVl2rKn1c0bO1bymBSHnEK9AziGPEcU7yGr1osxJecWwg-jsXSJoaQNobpndtS6khioViTcT9EjNQMIBBFqigQ3-UDj77j7IK1BVcaLQ7t_vocUSrOyf1LEAd8BbnkR1uMvZmbrYwWA/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_52_44%20PM.png"
+              data-book-link="https://rkmri.co/IR2lpER2IIyy/"
+              data-audio-link="https://www.youtube.com/playlist?list=PLjn4R4gw9CRZXVPb7v-0QEnwyvaEn4IKA"
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/23.Nobider_kahini_part-1_by_dr._md._asadullah_al-ghalib.pdf"
+              data-ebook-link="https://rkmri.co/IR2lpER2IIyy/"
+              data-desc="কুরআন-হাদিসের আলোকে নবীদের জীবন ও জীবন শিক্ষা।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-i5mW0C2ColXPaOthZBX73Aj_FBoDTBB3AtS9VRA_kbZujWYBaVl2rKn1c0bO1bymBSHnEK9AziGPEcU7yGr1osxJecWwg-jsXSJoaQNobpndtS6khioViTcT9EjNQMIBBFqigQ3-UDj77j7IK1BVcaLQ7t_vocUSrOyf1LEAd8BbnkR1uMvZmbrYwWA/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_52_44%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">নবীদের কাহিনী-১</h4>
+                <p class="book-meta">লেখক: মুহাম্মদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">কুরআন-হাদিসের আলোকে নবীদের জীবন ও জীবন শিক্ষা।</p>
+                <div class="book-tags"><span class="tag">ইতিহাস</span><span class="tag">নবীদের কাহিনী</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/IR2lpER2IIyy/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-gold" href="https://www.youtube.com/playlist?list=PLjn4R4gw9CRZXVPb7v-0QEnwyvaEn4IKA" target="_blank">🎧 অডিওবুক</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/IR2lpER2IIyy/" data-book-id="book-1">📘 E-Book</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/23.Nobider_kahini_part-1_by_dr._md._asadullah_al-ghalib.pdf" data-book-id="book-1">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 2: নবীদের কাহিনী-২ -->
+            <article class="book-card js-book"
+              data-book-id="book-2"
+              data-title="নবীদের কাহিনী-২"
+              data-author="মুহাম্মদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxq-1Oyx6-nRU6z9z7vZctMFccmeWaWxaZfLkUuCVN8jBqAifH9xiEkp7l5XSd39EHkPMaQvEXaMlBoYEh_vJIer2Uu1YCyenen6cj72gqIeZ1LkHHX_7GXdJqKPNDeE7aPD1NJODcv8Pq3lpf5Er1cdVS6ZXdNIegyF0l3nohAzebkjBLlFgBGQSQWkg/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_59_22%20PM.png"
+              data-book-link="https://rkmri.co/53eApTm53NE3/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/24.Nobider_kahini_part-2_by_dr._md._asadullah_al-ghalib.pdf"
+              data-ebook-link="https://rkmri.co/53eApTm53NE3/"
+              data-desc="নবীদের জীবন, দাওয়াত ও ঐতিহাসিক ঘটনাবলির চমৎকার উপস্থাপন।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxq-1Oyx6-nRU6z9z7vZctMFccmeWaWxaZfLkUuCVN8jBqAifH9xiEkp7l5XSd39EHkPMaQvEXaMlBoYEh_vJIer2Uu1YCyenen6cj72gqIeZ1LkHHX_7GXdJqKPNDeE7aPD1NJODcv8Pq3lpf5Er1cdVS6ZXdNIegyF0l3nohAzebkjBLlFgBGQSQWkg/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_59_22%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">নবীদের কাহিনী-২</h4>
+                <p class="book-meta">লেখক: মুহাম্মদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">নবীদের জীবন, দাওয়াত ও ঐতিহাসিক ঘটনাবলির চমৎকার উপস্থাপন।</p>
+                <div class="book-tags"><span class="tag">ইসলামিক জ্ঞান</span><span class="tag">ইতিহাস</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/53eApTm53NE3/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/53eApTm53NE3/" data-book-id="book-2">📘 E-Book</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/24.Nobider_kahini_part-2_by_dr._md._asadullah_al-ghalib.pdf" data-book-id="book-2">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 3: সীরাতুর রাসূল (ছাঃ) -->
+            <article class="book-card js-book"
+              data-book-id="book-3"
+              data-title="sসীরাতুর রাসূল (ছাঃ)"
+              data-author="মুহাম্মদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcVNuPk7wNdxp5uX19HDJyJM2kaUiqRx6Od2GPUQKedWkgrJpl8QdEKk6_fGwL5EZXQWCHjC4khrQ1BVqnWHP2OIySs3YvDZXkOVcedi84kPOzfsJd0VhCdA48jzyDuAow6Kc_fSPbMO_8gQW7BQ8aSdPoEML43nLnCxbiTtPmCOKv5LqBCN9ru05ntvA/s1448/ChatGPT%20Image%20Jun%2025,%202026,%2008_59_44%20PM.png"
+              data-book-link="https://rkmri.co/eNTNEMpEEe0T/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/59.seeratur_Rasool%20_SM_by_prof_dr._muhammad_asadullah_al_ghalib.pdf"
+              data-ebook-link="https://rkmri.co/eNTNEMpEEe0T/"
+              data-desc="রাসূল ﷺ-এর বিশুদ্ধ জীবন, দাওয়াত ও মহৎ চরিত্রের বিশ্লেষণ।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcVNuPk7wNdxp5uX19HDJyJM2kaUiqRx6Od2GPUQKedWkgrJpl8QdEKk6_fGwL5EZXQWCHjC4khrQ1BVqnWHP2OIySs3YvDZXkOVcedi84kPOzfsJd0VhCdA48jzyDuAow6Kc_fSPbMO_8gQW7BQ8aSdPoEML43nLnCxbiTtPmCOKv5LqBCN9ru05ntvA/s1448/ChatGPT%20Image%20Jun%2025,%202026,%2008_59_44%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">সীরাতুর রাসূল (ছাঃ)</h4>
+                <p class="book-meta">লেখক: মুহাম্মদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">রাসূল ﷺ-এর বিশুদ্ধ জীবন, দাওয়াত ও মহৎ চরিত্রের বিশ্লেষণ।</p>
+                <div class="book-tags"><span class="tag">সীরাত</span><span class="tag">জীবনচরিত্র</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/eNTNEMpEEe0T/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/eNTNEMpEEe0T/" data-book-id="book-3">📘 E-Book</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/59.seeratur_Rasool%20_SM_by_prof_dr._muhammad_asadullah_al_ghalib.pdf" data-book-id="book-3">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 4: আর-রাহীকুল মাখতূম -->
+            <article class="book-card js-book"
+              data-book-id="book-4"
+              data-title="আর-রাহীকুল মাখতূম"
+              data-author="সফিউর রহমান মুবারকপুরী"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx6yVtJFveyT9IPG8PrsP8KLa2H2zOpSiUEzzAJ8XSSDksJmg9Y1PxhApb9jkrwMkuldULWjE27990pj6-nfhaNIaqms1JVR9SL9xEVPfmY4L00H5jv5uvsfpf07Wwy-FkkXjSaxPhZzFf4hWMVx7JFSvBN0w9rnwMNXgi7OGi8hpO8YnpTxuWsnk-jbo/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_48_17%20PM.png"
+              data-book-link="https://rkmri.co/2ISy3eAT0oE3/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link="https://rkmri.co/TemAARmRoMem/"
+              data-desc="রাসূল ﷺ-এর জীবনী ও সিরাত নিয়ে বিশ্বব্যাপী পুরস্কৃত অনন্য গ্রন্থ।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx6yVtJFveyT9IPG8PrsP8KLa2H2zOpSiUEzzAJ8XSSDksJmg9Y1PxhApb9jkrwMkuldULWjE27990pj6-nfhaNIaqms1JVR9SL9xEVPfmY4L00H5jv5uvsfpf07Wwy-FkkXjSaxPhZzFf4hWMVx7JFSvBN0w9rnwMNXgi7OGi8hpO8YnpTxuWsnk-jbo/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_48_17%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">আর-রাহীকুল মাখতূম</h4>
+                <p class="book-meta">লেখক: সফিউর রহমান মুবারকপুরী</p>
+                <p class="book-desc">রাসূল ﷺ-এর জীবনী ও সিরাত নিয়ে বিশ্বব্যাপী পুরস্কৃত অনন্য গ্রন্থ।</p>
+                <div class="book-tags"><span class="tag">সীরাত</span><span class="tag">জীবনী</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/2ISy3eAT0oE3/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/TemAARmRoMem/" data-book-id="book-4">📘 E-Book</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 7: জীবন ও কর্ম : আবু বকর আস-সিদ্দীক (রা.) -->
+            <article class="book-card js-book"
+              data-book-id="book-7"
+              data-title="জীবন ও কর্ম : আবু বকর আস-সিদ্দীক (রা.)"
+              data-author="ড. আলী মুহাম্মদ সাল্লাবি | অনুবাদ: আদম আলী"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGhaQtHEL6RpXLa1dRn_WG8KlBjmx-gd5GLwN4c5jHr7hLMzE5Zq5sJNzdbmr1NDJ_5TlYtVML3SB4geOoO946yUVDejcwAth5ah70R7D9KQ6pHzdVvZOtabhzC7r1YqLahpecd9C11JgbT84sJNP2nfeGRMUWLQWDYeF6efT3McJIM3z0j7tyt_TpObM/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_56_20%20PM.png"
+              data-book-link="https://rkmri.co/pymTRyAoAAyE/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link="https://rkmri.co/ymyNm0AEMTE3/"
+              data-desc="প্রথম খলিফা হযরত আবু বকর (রা.)-এর জীবন, খিলাফতকাল ও ইসলামের অবদান।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGhaQtHEL6RpXLa1dRn_WG8KlBjmx-gd5GLwN4c5jHr7hLMzE5Zq5sJNzdbmr1NDJ_5TlYtVML3SB4geOoO946yUVDejcwAth5ah70R7D9KQ6pHzdVvZOtabhzC7r1YqLahpecd9C11JgbT84sJNP2nfeGRMUWLQWDYeF6efT3McJIM3z0j7tyt_TpObM/w480-h640/ChatGPT%20Image%20Jun%2025,%202026,%2008_56_20%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">জীবন ও কর্ম : আবু বকর আস-সিদ্দীক (রা.)</h4>
+                <p class="book-meta">লেখক: ড. আলী মুহাম্মদ সাল্লাবি</p>
+                <p class="book-desc">প্রথম খলিফা হযরত আবু বকর (রা.)-এর জীবন, খিলাফতকাল ও ইসলামের অবদান।</p>
+                <div class="book-tags"><span class="tag">সাহাবী</span><span class="tag">জীবনী</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/pymTRyAoAAyE/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/ymyNm0AEMTE3/" data-book-id="book-7">📘 E-Book</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <button class="slider-arrow next" id="topNext" aria-label="পরের বই">›</button>
+      </div>
+
+      <!-- MIDDLE ROW (CATEGORY: ঈমান আমল আত্মশুদ্ধি) -->
+      <h4 class="row-title">ঈমান, আমল ও আত্মশুদ্ধি বিষয়ক বইসমূহ</h4>
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="middlePrev" aria-label="আগের বই">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="middleBooksSlider">
+
+            <!-- Book 12: ছালাতুর রাসুল (ছাঃ) -->
+            <article class="book-card js-book"
+              data-book-id="book-12"
+              data-title="ছালাতুর রাসুল (ছাঃ)"
+              data-author="মুহাম্মাদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTAK1-ER8zN-PTnFhZofwXNo7Vpu8OuYnf_lwDb3PHMvRbzQmwYslYZtz-Br5Xdi8eK85Rw1-HLU5ocykomI4nkgXpCyVK7WENgUFBZqQErKaaRsFjJ4yHJn4AjwkWrbEFvJxjHHEudbxXAEppD2E6hZILb3WFXhETDRE4RW2M8bnE77xeavTPqEZocOU/w412-h640/Screenshot_43.jpg"
+              data-book-link="https://rkmri.co/RpyN55AyMlNS/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/08.Salatur_Rasool_(sm)_by_prof._dr._muhammad_asadullah_al-ghalib.pdf"
+              data-ebook-link="https://rkmri.co/RpyN55AyMlNS/"
+              data-desc="রাসূলুল্লাহ (ছাঃ)-এর বিশুদ্ধ নামাজ আদায়ের পদ্ধতি ও বিধানাবলি।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTAK1-ER8zN-PTnFhZofwXNo7Vpu8OuYnf_lwDb3PHMvRbzQmwYslYZtz-Br5Xdi8eK85Rw1-HLU5ocykomI4nkgXpCyVK7WENgUFBZqQErKaaRsFjJ4yHJn4AjwkWrbEFvJxjHHEudbxXAEppD2E6hZILb3WFXhETDRE4RW2M8bnE77xeavTPqEZocOU/w412-h640/Screenshot_43.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ছালাতুর রাসুল (ছাঃ)</h4>
+                <p class="book-meta">লেখক: Muhammadd Asadullah Al-Ghalib</p>
+                <p class="book-desc">রাসূলুল্লাহ (ছাঃ)-এর বিশুদ্ধ নামাজ আদায়ের পদ্ধতি ও বিধানাবলি।</p>
+                <div class="book-tags"><span class="tag">সালাত</span><span class="tag">আমল</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/RpyN55AyMlNS/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/RpyN55AyMlNS/" data-book-id="book-12">📘 E-Book</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/08.Salatur_Rasool_(sm)_by_prof._dr._muhammad_asadullah_al-ghalib.pdf" data-book-id="book-12">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 13: তাফসীরুল কুরআন (৩০তম পারা) -->
+            <article class="book-card js-book"
+              data-book-id="book-13"
+              data-title="তাফসীরুল কুরআন (৩০তম পারা)"
+              data-author="মুহাম্মাদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIupKMHEeXAKyCyW4rgfcQFozyEyUjD33jWNdr9gc5I6zTl1tMbcmZW0LLm373Bh_bEB1HsMHi53FKHVwDVD6Jpx4hf4yDnC7hb2vGtv8G1ourlW4sr8DCYL12sIHrzPy32cQQrqkGgpx-Zz1jexIPoBhDazdB1NyPJwhq5xJsuM3hu7kBvh_YRs_lqGA/w468-h640/Screenshot_44.jpg"
+              data-book-link="https://rkmri.co/e2I5eNym2Ae2/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/25.tafseerul_quran_30th%20para_by_prof._dr._muhammad_asadullah_al-ghalib.pdf"
+              data-ebook-link=""
+              data-desc="পবিত্র কুরআনের ৩০তম পারার (আম্মাপারা) নির্ভরযোগ্য ও বিশুদ্ধ ব্যাখ্যা।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIupKMHEeXAKyCyW4rgfcQFozyEyUjD33jWNdr9gc5I6zTl1tMbcmZW0LLm373Bh_bEB1HsMHi53FKHVwDVD6Jpx4hf4yDnC7hb2vGtv8G1ourlW4sr8DCYL12sIHrzPy32cQQrqkGgpx-Zz1jexIPoBhDazdB1NyPJwhq5xJsuM3hu7kBvh_YRs_lqGA/w468-h640/Screenshot_44.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">তাফসীরুল কুরআন (৩০তম পারা)</h4>
+                <p class="book-meta">লেখক:  মুহাম্মাদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">পবিত্র কুরআনের ৩০তম পারার (আম্মাপারা) নির্ভরযোগ্য ও বিশুদ্ধ ব্যাখ্যা।</p>
+                <div class="book-tags"><span class="tag">তাফসীর</span><span class="tag">কুরআন</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/e2I5eNym2Ae2/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/25.tafseerul_quran_30th%20para_by_prof._dr._muhammad_asadullah_al-ghalib.pdf" data-book-id="book-13">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 14: তরজমাতুল কুরআন -->
+            <article class="book-card js-book"
+              data-book-id="book-14"
+              data-title="তরজমাতুল কুরআন (অনুবাদসহ বাংলা কুরআন)"
+              data-author="মুহাম্মাদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYb9mNWV3QAQ92qWCUruLjtbBjMgAaq5yjGLByh1yygM7ehC_e0xf21a-cKtip3WiF-swXhh0SiHYUWPVzWQQBrgHUAdPIYV9b3hI_go61OsLNU6KCusmlk4zjtiHAv5SYBlII3I8AdLBkKNH_AQdgiLlpnnpg0mFLFHWKGexODI5PwMcGkmfnSEq1NQA/w488-h640/Screenshot_46.jpg"
+              data-book-link="https://rkmri.co/lI50ASelSAy0/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books/Tarjamatul_Quran_1-30_%20para_by_prof_dr_asadullah_al-ghalib_demo.pdf"
+              data-ebook-link=""
+              data-desc="পবিত্র কুরআনের ১-৩০ পারার সহজ ও প্রাঞ্জল বাংলা বঙ্গানুবাদ।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYb9mNWV3QAQ92qWCUruLjtbBjMgAaq5yjGLByh1yygM7ehC_e0xf21a-cKtip3WiF-swXhh0SiHYUWPVzWQQBrgHUAdPIYV9b3hI_go61OsLNU6KCusmlk4zjtiHAv5SYBlII3I8AdLBkKNH_AQdgiLlpnnpg0mFLFHWKGexODI5PwMcGkmfnSEq1NQA/w488-h640/Screenshot_46.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">তরজমাতুল কুরআন (অনুবাদসহ বাংলা কুরআন)</h4>
+                <p class="book-meta">লেখক: মুহাম্মাদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">পবিত্র কুরআনের ১-৩০ পারার সহজ ও প্রাঞ্জল বাংলা বঙ্গানুবাদ।</p>
+                <div class="book-tags"><span class="tag">অনুবাদ</span><span class="tag">কুরআন</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/lI50ASelSAy0/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books/Tarjamatul_Quran_1-30_%20para_by_prof_dr_asadullah_al-ghalib_demo.pdf" data-book-id="book-14">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 15: আল্লাহর উপর ভরসা -->
+            <article class="book-card js-book"
+              data-book-id="book-15"
+              data-title="আল্লাহর উপর ভরসা"
+              data-author="মুহাম্মাদ আব্দুল মালেক"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEignH16ztugXLHITA-asuOVcP9TuzHn4Gb4wE6jQnnUB55WqrxqSWx1CmcAkx-deeJtem0tAEnzzB45gsqCs8GE8ccI5g-vCu-Nh0C_CE1m3dTYarMhsuKF8DQS3tJerizGjLflX2NdT2nEwagKtuBJ8u4EFyOAIbLRxpRpA2lZTxkMM7HAUb2PMi7cNAE/w406-h640/Screenshot_47.jpg"
+              data-book-link="https://rkmri.co/p0p30M2Il0MI/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/64.allahor_upor_vorsha_by_muhammad_saleh_al-munajjid.pdf"
+              data-ebook-link=""
+              data-desc="তাওয়াক্কুল বা আল্লাহর উপর ভরসা করার গুরুত্ব, কল্যাণ ও বাস্তব উপায়সমূহ।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEignH16ztugXLHITA-asuOVcP9TuzHn4Gb4wE6jQnnUB55WqrxqSWx1CmcAkx-deeJtem0tAEnzzB45gsqCs8GE8ccI5g-vCu-Nh0C_CE1m3dTYarMhsuKF8DQS3tJerizGjLflX2NdT2nEwagKtuBJ8u4EFyOAIbLRxpRpA2lZTxkMM7HAUb2PMi7cNAE/w406-h640/Screenshot_47.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">আল্লাহর উপর ভরসা</h4>
+                <p class="book-meta">লেখক:  মুহাম্মাদ আব্দুল মালেক</p>
+                <p class="book-desc">তাওয়াক্কুল বা আল্লাহর উপর ভরসা করার গুরুত্ব, কল্যাণ ও বাস্তব উপায়সমূহ।</p>
+                <div class="book-tags"><span class="tag">তাওয়াক্কুল</span><span class="tag">आत्मশুদ্ধি</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/p0p30M2Il0MI/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/64.allahor_upor_vorsha_by_muhammad_saleh_al-munajjid.pdf" data-book-id="book-15">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 16: তারুণ্যের আত্মপাঠ ও समाजচিন্তা -->
+            <article class="book-card js-book"
+              data-book-id="book-16"
+              data-title="তারুণ্যের আত্মপাঠ ও সমাজচিন্তা"
+              data-author="ড. আহমাদ আব্দুল্লাহ ছাকিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiihWr8JYDL61EfPaTx5JUy1XzI2WLjypCOq3vegGGn8-ICU4IFhsRoJsqLJzwg5xhb25ArZQuyvjFv7wQnYAb6w_VSYZIKG89AGXAM12kftBTF-j_ypZ6bwtU4IwHEVZDcTWclh0O2XmKLBrS4wucxONCdYmknjOlwJuKL6aLUzaOUv4hDWGwp0kyV9zo/w402-h640/Screenshot_48.jpg"
+              data-book-link="https://rkmri.co/SA2eo525M0To/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/tarunner_attopath_by_dr._ahmad_abdullah_saqib.pdf"
+              data-ebook-link=""
+              data-desc="তরুণদের নৈতিক উন্নয়ন, আত্মগঠন ও দায়িত্বশীল সমাজচিন্তার দিকনির্দেশনা।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiihWr8JYDL61EfPaTx5JUy1XzI2WLjypCOq3vegGGn8-ICU4IFhsRoJsqLJzwg5xhb25ArZQuyvjFv7wQnYAb6w_VSYZIKG89AGXAM12kftBTF-j_ypZ6bwtU4IwHEVZDcTWclh0O2XmKLBrS4wucxONCdYmknjOlwJuKL6aLUzaOUv4hDWGwp0kyV9zo/w402-h640/Screenshot_48.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">তারুণ্যের আত্মপাঠ ও সমাজচিন্তা</h4>
+                <p class="book-meta">লেখক: ড. আহমাদ আব্দুল্লাহ ছাকিব</p>
+                <p class="book-desc">তরুণদের নৈতিক উন্নয়ন, আত্মগঠন ও দায়িত্বশীল সমাজচিন্তার দিকনির্দেশনা।</p>
+                <div class="book-tags"><span class="tag">তারুণ্য</span><span class="tag">চরিত্র গঠন</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/SA2eo525M0To/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/tarunner_attopath_by_dr._ahmad_abdullah_saqib.pdf" data-book-id="book-16">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 17: ধন-সম্পদ প্রয়োজনীয়তা ও অপব্যবহারের পরিণতি -->
+            <article class="book-card js-book"
+              data-book-id="book-17"
+              data-title="ধন-সম্পদ প্রয়োজনীয়তা ও অপব্যবহারের পরিণতি"
+              data-author="ড.  মুহাম্মাদ সাখাওয়াত হোসাইন"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrbkcXBCv0DF6mc9ZXKCsfJ2WSUmKYwde2g8oU0i46zAmwGm9DxBnI4WRN8_-7a2DERC1-DGbEx_2sRRZsUimx_gXA5ZLgloA1Ds8bZTaGFHWWSEX18PCJWhLfWiYSiL1cKb_olprH6vIefBSBee7WREKTCeXWJ_-9WioSiwotA02rdNyjC2r6aifqJ9w/s809/Screenshot_49.jpg"
+              data-book-link=""
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/dhon_shompod_proyojoniota_o_opobaboharar_porinoti_by_dr._muhammad_sakhawat_hosain.pdf"
+              data-ebook-link=""
+              data-desc="ধন-সম্পদের সঠিক অর্জন ও ব্যয় পদ্ধতি এবং এর অপব্যবহারের ভয়াবহতা।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrbkcXBCv0DF6mc9ZXKCsfJ2WSUmKYwde2g8oU0i46zAmwGm9DxBnI4WRN8_-7a2DERC1-DGbEx_2sRRZsUimx_gXA5ZLgloA1Ds8bZTaGFHWWSEX18PCJWhLfWiYSiL1cKb_olprH6vIefBSBee7WREKTCeXWJ_-9WioSiwotA02rdNyjC2r6aifqJ9w/s809/Screenshot_49.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ধন-সম্পদ প্রয়োজনীয়তা ও অপব্যবহারের পরিণতি</h4>
+                <p class="book-meta"> লেখক: ড.  মুহাম্মাদ সাখাওয়াত হোসাইন</p>
+                <p class="book-desc">ধন-সম্পদের সঠিক অর্জন ও ব্যয় পদ্ধতি এবং এর অপব্যবহারের ভয়াবহতা।</p>
+                <div class="book-tags"><span class="tag">সমাজচিন্তা</span><span class="tag">অর্থনীতি</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/dhon_shompod_proyojoniota_o_opobaboharar_porinoti_by_dr._muhammad_sakhawat_hosain.pdf" data-book-id="book-17">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 18: অল্পে তুষ্টি : জীবনের প্রশান্তি -->
+            <article class="book-card js-book"
+              data-book-id="book-18"
+              data-title="অল্পে তুষ্টি : জীবনের প্রশান্তি"
+              data-author="আব্দুল্লাহ আল-মারুফ"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi61M1SHaGQG8cDKH01izKOmuBqVNavrd8qLhwdfcXZIXLzKsGkoH5TKeqJ5B0kY06yiqkYae6KPgHAnMPsnQqIkSitE-HSCaLqmLLMBB7fWw53s_P1j5XpgoNl1A-aoPonP8spWfI8_AaG3z1qFh_qGTPtRyzgNQo0bhysJiOtbzWov4cdxkqX7j93j80/w506-h640/Screenshot_50.jpg"
+              data-book-link="https://rkmri.co/mSMe230eM22E/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/olpe%20tusti_by_abdullah_al_maruf.pdf"
+              data-ebook-link=""
+              data-desc="অস্থির ও হতাশাময় জীবনে অল্পে তুষ্ট বা কানায়াত থাকার মাধ্যমে প্রশান্তি অর্জন।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi61M1SHaGQG8cDKH01izKOmuBqVNavrd8qLhwdfcXZIXLzKsGkoH5TKeqJ5B0kY06yiqkYae6KPgHAnMPsnQqIkSitE-HSCaLqmLLMBB7fWw53s_P1j5XpgoNl1A-aoPonP8spWfI8_AaG3z1qFh_qGTPtRyzgNQo0bhysJiOtbzWov4cdxkqX7j93j80/w506-h640/Screenshot_50.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">অল্পে তুষ্টি : জীবনের প্রশান্তি</h4>
+                <p class="book-meta">লেখক: আব্দুল্লাহ আল-মারুফ</p>
+                <p class="book-desc">অস্থির ও হতাশাময় জীবনে অল্পে তুষ্ট বা কানায়াত থাকার মাধ্যমে প্রশান্তি অর্জন।</p>
+                <div class="book-tags"><span class="tag">প্রশান্তি</span><span class="tag">आत्मশুদ্ধি</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/mSMe230eM22E/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/olpe%20tusti_by_abdullah_al_maruf.pdf" data-book-id="book-18">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 19: ছহীহ কিতাবুল দো‘আ -->
+            <article class="book-card js-book"
+              data-book-id="book-19"
+              data-title="ছহীহ কিতাবুল দো‘আ"
+              data-author="ড. মুহাম্মদ নূরুল ইসলাম"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMwQlOd6c5I8CTPHLYxfW00m0O_zIY2zSxcEL4ql_YHdsg5CE32TOosSmvHaHIqrpo0zAnfKL7A8jhLs2IGSP1y9ouX2gwRFbwJ1AiKz19CA2ngL5Q_8lsgQDpl1ol4ySu5E7FKJnuKNuSBsSuH_2Z4tuVS2x0pceiO-oXttjxQzktKFFjEyPqt58PMpE/s721/Screenshot_51.jpg"
+              data-book-link="https://rkmri.co/TNIeTE5IpeMA/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/50.sahih_kitabud_doa_3rd_ed_by_%20muhammad_nurul_islam.pdf"
+              data-ebook-link=""
+              data-desc="কুরআন ও ছহীহ হাদিস দ্বারা প্রমাণিত প্রতিদিনের প্রয়োজনীয় দোয়ার সংকলন।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMwQlOd6c5I8CTPHLYxfW00m0O_zIY2zSxcEL4ql_YHdsg5CE32TOosSmvHaHIqrpo0zAnfKL7A8jhLs2IGSP1y9ouX2gwRFbwJ1AiKz19CA2ngL5Q_8lsgQDpl1ol4ySu5E7FKJnuKNuSBsSuH_2Z4tuVS2x0pceiO-oXttjxQzktKFFjEyPqt58PMpE/s721/Screenshot_51.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ছহীহ কিতাবুল দো‘আ</h4>
+                <p class="book-meta">লেখক: ড. মুহাম্মদ নূরুল ইসলাম</p>
+                <p class="book-desc">কুরআন ও ছহীহ হাদিস দ্বারা প্রমাণিত প্রতিদিনের প্রয়োজনীয় দোয়ার সংকলন।</p>
+                <div class="book-tags"><span class="tag">দোয়া</span><span class="tag">আমল</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/TNIeTE5IpeMA/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/50.sahih_kitabud_doa_3rd_ed_by_%20muhammad_nurul_islam.pdf" data-book-id="book-19">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 20: মধ্যপন্থা : গুরুত্ব ও প্রয়োজনীয়তা -->
+            <article class="book-card js-book"
+              data-book-id="book-20"
+              data-title="मध्यপন্থা : গুরুত্ব ও প্রয়োজনীয়তা"
+              data-author="ড.  মুহাম্মাদ কবিরুল ইসলাম"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjK8CI7rLmJqZ9ftbiZ-WpAIGzTgZwVkw6olEJVbnlncWAWctYK9kk_115RWZrKue21nCb8hAS2HSxC7xaq5-hMqJvlDyC3BnUrD7Xnw2pPZnI7nbNX_CgGI4SQ7vIAYIcyclqC5mdOR1DRr4qDYmUTjohVEShcbFFrRzLrJI13eEtH9HmmD7PaMninP0E/w476-h640/Screenshot_53.jpg"
+              data-book-link="https://rkmri.co/NleMyAMReMA3/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/46.madhaypantha_by_d._kabirul_islam.pdf"
+              data-ebook-link=""
+              data-desc=" can be set based on criteria ... ">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjK8CI7rLmJqZ9ftbiZ-WpAIGzTgZwVkw6olEJVbnlncWAWctYK9kk_115RWZrKue21nCb8hAS2HSxC7xaq5-hMqJvlDyC3BnUrD7Xnw2pPZnI7nbNX_CgGI4SQ7vIAYIcyclqC5mdOR1DRr4qDYmUTjohVEShcbFFrRzLrJI13eEtH9HmmD7PaMninP0E/w476-h640/Screenshot_53.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">मध्यপন্থা : গুরুত্ব ও প্রয়োজনীয়তা</h4>
+                <p class="book-meta">লেখক: ড.  মুহাম্মাদ কবিরুল ইসলাম</p>
+                <p class="book-desc">ইসলামের গুরুত্বপূর্ণ শিক্ষা — আকীদা, ইবাদত ও জীবনে মধ্যপন্থা অবলম্বন করার গুরুত্ব।</p>
+                <div class="book-tags"><span class="tag">মধ্যপন্থা</span><span class="tag">জীবনচরিত্র</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/NleMyAMReMA3/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/46.madhaypantha_by_d._kabirul_islam.pdf" data-book-id="book-20">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 21: ছিয়াম ও ক্বিয়াম -->
+            <article class="book-card js-book"
+              data-book-id="book-21"
+              data-title="ছিয়াম ও ক্বিয়াম"
+              data-author="মুহাম্মাদ আসাদুল্লাহ আল-গালিব"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgu-RpQA4EpFjpDBrS2XxPdwnSnz9kTXXk2x0jx4Nf5NQKDLLUyo3a3DXuzXDlbMA7uthT4Y70grY4JoK0sEtwJqlcJnX58dO5tGEcIGVBRQWPgySoey1UVForVT2d3NV6M6Kl9YSmgT5jbwB4Bm6jF_wi_K3qaiCfkhrHKKDl-aeSZTsrd33t8zt_lyC0/w428-h640/Screenshot_54.jpg"
+              data-book-link="https://rkmri.co/lNTMIElolAlR/"
+              data-audio-link=""
+              data-pdf-link="https://library.hadeethfoundationbd.com/books_pdf/siyam_o_qiyam_by_prof._dr._muhammad_asadullah_al-ghalib.pdf"
+              data-ebook-link="https://rkmri.co/lNTMIElolAlR/"
+              data-desc="কুরআন ও ছহীহ হাদিসের আলোকে রোজা, সেহরি, ইফতার এবং কিয়ামুল লাইলের বিধান।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgu-RpQA4EpFjpDBrS2XxPdwnSnz9kTXXk2x0jx4Nf5NQKDLLUyo3a3DXuzXDlbMA7uthT4Y70grY4JoK0sEtwJqlcJnX58dO5tGEcIGVBRQWPgySoey1UVForVT2d3NV6M6Kl9YSmgT5jbwB4Bm6jF_wi_K3qaiCfkhrHKKDl-aeSZTsrd33t8zt_lyC0/w428-h640/Screenshot_54.jpg');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ছিয়াম ও ক্বিয়াম</h4>
+                <p class="book-meta">লেখক: মুহাম্মাদ আসাদুল্লাহ আল-গালিব</p>
+                <p class="book-desc">কুরআন ও ছহীহ হাদিসের আলোকে রোজা, সেহরি, ইফতার এবং কিয়ামুল লাইলের বিধান।</p>
+                <div class="book-tags"><span class="tag">রোজা</span><span class="tag">আমল</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/lNTMIElolAlR/" target="_blank">📚 বই দেখুন</a>
+                  <a class="btn btn-purple js-ebook-jump" href="https://rkmri.co/lNTMIElolAlR/" data-book-id="book-21">📘 E-Book</a>
+                  <a class="btn btn-blue js-pdf-jump" href="https://library.hadeethfoundationbd.com/books_pdf/siyam_o_qiyam_by_prof._dr._muhammad_asadullah_al-ghalib.pdf" data-book-id="book-21">📄 PDF</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <button class="slider-arrow next" id="middleNext" aria-label="পরের বই">›</button>
+      </div>
+
+      <!-- BOTTOM ROW (GENERAL / CATEGORY COLLECTIONS GO HERE) -->
+      <h4 class="row-title">ইসলামিক সংগ্রহ, একাডেমিক ও ক্যাটাগরি বুকসমূহ</h4>
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="bottomPrev" aria-label="আগের বই">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="bottomBooksSlider">
+
+            <!-- Book 8: নবি-রাসুল, সাহাবা, তাবেঈ ও অলি-আওলিয়া -->
+            <article class="book-card js-book"
+              data-book-id="book-8"
+              data-title="নবি-রাসুল, সাহাবা, তাবেঈ ও অলি-আওলিয়া"
+              data-author="সমগ্র সংগ্রহ"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZKbsOr2m0KOsNMxL_wBfh6T0e3WgEvOIhtuAUugnnENa2y3U5QxAuiqJjc7Ez65uLMXauAVTaIDg2PqQrT5d4V_99w0BtwYqpQZPobMhlXnvYbKVEN44zBJ341QTQZABxBkLeB1zCM4x9TUMC4bB9_yBzW0Skw5uj_W-JD7igQwH9k7kaKS8X8tsszGI/w478-h640/Gemini_Generated_Image_jhg3y1jhg3y1jhg3.png"
+              data-book-link="https://rkmri.co/oee0MIReoT2A/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="নবি, সাহাবা, তাবেঈ, তাবে-তাবেঈ ও অলি-আওলিয়াদের জীবনগাথার বইয়ের ক্যাটাগরি।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZKbsOr2m0KOsNMxL_wBfh6T0e3WgEvOIhtuAUugnnENa2y3U5QxAuiqJjc7Ez65uLMXauAVTaIDg2PqQrT5d4V_99w0BtwYqpQZPobMhlXnvYbKVEN44zBJ341QTQZABxBkLeB1zCM4x9TUMC4bB9_yBzW0Skw5uj_W-JD7igQwH9k7kaKS8X8tsszGI/w478-h640/Gemini_Generated_Image_jhg3y1jhg3y1jhg3.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">নবি-রাসুল, সাহাবা, তাবেঈ ও অলি-আওলিয়া</h4>
+                <p class="book-meta">সমগ্র সংগ্রহ</p>
+                <p class="book-desc">নবি, সাহাবা, তাবেঈ, তাবে-তাবেঈ ও অলি-আওলিয়াদের জীবনগাথার বইয়ের ক্যাটাগরি।</p>
+                <div class="book-tags"><span class="tag">জীবনী</span><span class="tag">ইসলামিক সংগ্রহ</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/oee0MIReoT2A/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 9: ইতিহাস ও ঐতিহ্য -->
+            <article class="book-card js-book"
+              data-book-id="book-9"
+              data-title="ইতিহাস ও ঐতিহ্য"
+              data-author="ইসলামিক ইতিহাস সংগ্রহ"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiowXcN8jLlX3sMAmz_UYFrB1oTTcjabP2jc9GJJsla2nV8vBfx-lsIjwc2eYDH8Vh1xtVXDkOugPgRrloGyesdfy6Y7gwJOHpSNcX9v-ndmuv6jI1IZQXThmkD8hK8ZC1eT6HJddHrXR3kIY80RtNerfEjf65h5GYTOqL1sHYtcAofBgSSrDEJ5MEIhkY/w478-h640/Gemini_Generated_Image_621tk3621tk3621t.png"
+              data-book-link="https://rkmri.co/55MeT3m2e2Ae/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="ইসলামের গৌরবময় ইতিহাস, সভ্যতা, ঐতিহ্য ও গুরুত্বপূর্ণ ঘটনাবলি সম্পর্কিত বইয়ের তালিকা।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiowXcN8jLlX3sMAmz_UYFrB1oTTcjabP2jc9GJJsla2nV8vBfx-lsIjwc2eYDH8Vh1xtVXDkOugPgRrloGyesdfy6Y7gwJOHpSNcX9v-ndmuv6jI1IZQXThmkD8hK8ZC1eT6HJddHrXR3kIY80RtNerfEjf65h5GYTOqL1sHYtcAofBgSSrDEJ5MEIhkY/w478-h640/Gemini_Generated_Image_621tk3621tk3621t.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ইতিহাস ও ঐতিহ্য</h4>
+                <p class="book-meta">ইসলামিক ইতিহাস সংগ্রহ</p>
+                <p class="book-desc">ইসলামের গৌরবময় ইতিহাস, সভ্যতা, ঐতিহ্য ও গুরুত্বপূর্ণ ঘটনাবলি সম্পর্কিত বইয়ের তালিকা।</p>
+                <div class="book-tags"><span class="tag">ইতিহাস</span><span class="tag">ঐতিহ্য</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/55MeT3m2e2Ae/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 5: সকল ইসলামিক বই -->
+            <article class="book-card js-book"
+              data-book-id="book-5"
+              data-title="সকল ইসলামিক বই"
+              data-author="রকমারির ইসলামিক বই সংগ্রহ"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhN4tno2Qljb1zZzqBUB3bTCr4yCEMEbiQQRaxddZ4E7mGW7YJDgJjXQUFZfIF0gzWjeoYnOhsV0a_ViYQ2rkSGw0KQ0Mr3AgvKOl3CfPwkYgFBdBlTDdcVJ_TXpCvKja7Xj-80M4idXR197f69Ih3NkVMpqdOeSLXv-kDnBVze2v3xEzdjzs6eWH0ja0/w478-h640/Gemini_Generated_Image_bg5ei0bg5ei0bg5e.png"
+              data-book-link="https://rkmri.co/lpeEEmpMy52p/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="আকীদা, হাদিস, ফিকহ, সীরাত, তাফসীর সহ সকল ইসলামিক বইয়ের ক্যাটাগরি।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhN4tno2Qljb1zZzqBUB3bTCr4yCEMEbiQQRaxddZ4E7mGW7YJDgJjXQUFZfIF0gzWjeoYnOhsV0a_ViYQ2rkSGw0KQ0Mr3AgvKOl3CfPwkYgFBdBlTDdcVJ_TXpCvKja7Xj-80M4idXR197f69Ih3NkVMpqdOeSLXv-kDnBVze2v3xEzdjzs6eWH0ja0/w478-h640/Gemini_Generated_Image_bg5ei0bg5ei0bg5e.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">সকল ইসলামিক বই</h4>
+                <p class="book-meta">রকমারির ইসলামিক বই সংগ্রহ</p>
+                <p class="book-desc">আকীদা, হাদিস, ফিকহ, সীরাত, তাফসীর সহ সকল ইসলামিক বইয়ের ক্যাটাগরি।</p>
+                <div class="book-tags"><span class="tag">ইসলামিক বই</span><span class="tag">আকীদা</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/lpeEEmpMy52p/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 6: রকমারির সকল বই (Updating with premium image from blogger user upload list) -->
+            <article class="book-card js-book"
+              data-book-id="book-6"
+              data-title="রকমারির সকল বই"
+              data-author="Rokomari Book Collection"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7iybMTD5D6C_NXXoFHSJ1ZkpT9hGtpscxH8C2E4HgeJlJupKCmkvEZyBWN2gZSve-YX4QricWvNfKGW5eJQtv84brn6Um1aseWAzg8nTjwsJCmV40Th9nkjuQ3tbXuUyfJ7BlMFswS3F6bYYoThyYx4b5OPriaPIOPJvtIPNoiiLNSz9nHXsWAiGEzp8/w480-h640/ChatGPT%20Image%20Jun%2026,%202026,%2003_47_16%20PM.png"
+              data-book-link="https://rkmri.co/eS3MAppeMAEM/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="রকমারির বিশাল সব ধরনের বইয়ের সামগ্রিক কালেকশন একসাথে দেখার প্রবেশদ্বার।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7iybMTD5D6C_NXXoFHSJ1ZkpT9hGtpscxH8C2E4HgeJlJupKCmkvEZyBWN2gZSve-YX4QricWvNfKGW5eJQtv84brn6Um1aseWAzg8nTjwsJCmV40Th9nkjuQ3tbXuUyfJ7BlMFswS3F6bYYoThyYx4b5OPriaPIOPJvtIPNoiiLNSz9nHXsWAiGEzp8/w480-h640/ChatGPT%20Image%20Jun%2026,%202026,%2003_47_16%20PM.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">রকমারির সকল বই</h4>
+                <p class="book-meta">Rokomari Book Collection</p>
+                <p class="book-desc">রকমারির বিশাল সব ধরনের বইয়ের সামগ্রিক কালেকশন একসাথে দেখার প্রবেশদ্বার।</p>
+                <div class="book-tags"><span class="tag">সকল বই</span><span class="tag">Rokomari</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/eS3MAppeMAEM/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 10: একাডেমিক বই -->
+            <article class="book-card js-book"
+              data-book-id="book-10"
+              data-title="একাডেমিক বই"
+              data-author="Academic Collection"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqI4M6uqupptGHyDaPYbtGyBYz2YaOzA6ufbZX3wlYGz-kjZuqULm_PGvoffXiivqelxT5OTkniZJdHgr4Bjvco4JInlkTdf547422XRGiALoFIMQzRPIEbT7ODVSavq45QITjcWGNfkrPAx2Df8LRdb32jru9sIDVopVf12yQy_kwhbbKx6nsc_39FSY/w478-h640/Gemini_Generated_Image_hzgibohzgibohzgi.png"
+              data-book-link="https://rkmri.co/plm05MAMe2eS/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="স্কুল, college, university ও সকল প্রতিযোগিতামূলক পরীক্ষার সিলেবাস ও একাডেমিক বই।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqI4M6uqupptGHyDaPYbtGyBYz2YaOzA6ufbZX3wlYGz-kjZuqULm_PGvoffXiivqelxT5OTkniZJdHgr4Bjvco4JInlkTdf547422XRGiALoFIMQzRPIEbT7ODVSavq45QITjcWGNfkrPAx2Df8LRdb32jru9sIDVopVf12yQy_kwhbbKx6nsc_39FSY/w478-h640/Gemini_Generated_Image_hzgibohzgibohzgi.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">একাডেমিক বই</h4>
+                <p class="book-meta">Academic Collection</p>
+                <p class="book-desc">স্কুল, college, university ও সকল প্রতিযোগিতামূলক পরীক্ষার সিলেবাস ও একাডেমিক বই।</p>
+                <div class="book-tags"><span class="tag">Academic</span><span class="tag">Study</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/plm05MAMe2eS/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Book 11: ইংরেজি ভাষার বই -->
+            <article class="book-card js-book"
+              data-book-id="book-11"
+              data-title="ইংরেজি ভাষার বই"
+              data-author="English Books Collection"
+              data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0mydwoIn8HIw8EaqcTPvwMPUQhMw6e3ZV1OMh6MooWKsWz-C3x6s6vGdPZTsiV5x7IAWrN3A92N54sr7S0ZbGShBcEbJgWLszLCCPJevkMMJL_lQ5oOaxROa-ZQWpEvo-4x5q0xZSE9H2vz2oIg8f89v6hwhjNu6YcuNpR5zoa2MMIWb5jsGDRCmgDdQ/w478-h640/Gemini_Generated_Image_99oe3v99oe3v99oe.png"
+              data-book-link="https://rkmri.co/R0R3mIeRReeR/"
+              data-audio-link=""
+              data-pdf-link=""
+              data-ebook-link=""
+              data-desc="আন্তর্জাতিক ইসলামিক, একাডেমিক ও কথাসাহিত্যমূলক ইংরেজি বইয়ের সংগ্রহ।">
+              <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0mydwoIn8HIw8EaqcTPvwMPUQhMw6e3ZV1OMh6MooWKsWz-C3x6s6vGdPZTsiV5x7IAWrN3A92N54sr7S0ZbGShBcEbJgWLszLCCPJevkMMJL_lQ5oOaxROa-ZQWpEvo-4x5q0xZSE9H2vz2oIg8f89v6hwhjNu6YcuNpR5zoa2MMIWb5jsGDRCmgDdQ/w478-h640/Gemini_Generated_Image_99oe3v99oe3v99oe.png');"></div>
+              <div class="book-body">
+                <h4 class="book-title">ইংরেজি ভাষার বই</h4>
+                <p class="book-meta">English Books Collection</p>
+                <p class="book-desc">আন্তর্জাতিক ইসলামিক, একাডেমিক ও কথাসাহিত্যমূলক ইংরেজি বইয়ের সংগ্রহ।</p>
+                <div class="book-tags"><span class="tag">English</span><span class="tag">Books</span></div>
+                <div class="auto-link-group">
+                  <a class="btn btn-primary" href="https://rkmri.co/R0R3mIeRReeR/" target="_blank">📚 বই দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <button class="slider-arrow next" id="bottomNext" aria-label="পরের বই">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="resource-section" id="pdfs">
+    <div class="container">
+      <div class="section-head">
+        <h3>PDF রিসোর্স</h3>
+        <div class="divider"></div>
+        <p>যে বইগুলোর PDF লিংক বসানো আছে, সেগুলো এখানে স্বয়ংক্রিয়ভাবে একটি চমৎকার স্লাইডার রূপে উপস্থিত হবে।</p>
+      </div>
+      
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="pdfPrev" aria-label="আগের PDF">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="pdf-resource-grid"></div>
+        </div>
+        <button class="slider-arrow next" id="pdfNext" aria-label="পরের PDF">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="resource-section" id="ebooks">
+    <div class="container">
+      <div class="section-head">
+        <h3>E-Book রিসোর্স</h3>
+        <div class="divider"></div>
+        <p>বাছাইকৃত সেরা বইগুলোর E-Book সংগ্রহ। স্লাইড করে আপনার পছন্দের সংস্করণটি বেছে নিয়ে সহজে পড়ুন।</p>
+      </div>
+
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="ebookPrev" aria-label="আগের E-Book">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="ebook-resource-grid"></div>
+        </div>
+        <button class="slider-arrow next" id="ebookNext" aria-label="পরের E-Book">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="other-products" id="products">
+    <div class="container">
+      <div class="section-head">
+        <h3>অন্যান্য প্রোডাক্ট</h3>
+        <div class="divider"></div>
+        <p>বইয়ের বাইরে দরকারি অন্যান্য প্রোডাক্ট—যেমন gadget, electronics, food, lifestyle product ইত্যাদি।</p>
+      </div>
+
+      <!-- Slider Wrapper for Other Products to enable functional slides -->
+      <div class="book-row-wrap">
+        <button class="slider-arrow prev" id="prodPrev" aria-label="আগের প্রোডাক্ট">‹</button>
+        <div class="books-viewport">
+          <div class="books-slider" id="productsSlider">
+
+            <article class="product-card">
+              <div class="product-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIuERTaZKtXMH0N2stPj7rreHNR2NGvzAkJ7hCJ5IeGlLtwZArHJvwFp8YvyZpFXA4_x96u4Z_fj4uEBmB8ng7hmXXFrFyTEPA6zwFTMVUPoC5Tjuxl1ia59bGXXbGeoKzkjSgInK_DNan7OgTH8hcc8adwT36RL9pT7nAyZUeK-uXv73lnBs7qE5gp5s/w480-h640/ChatGPT%20Image%20Jun%2026,%202026,%2004_02_46%20PM.png');"></div>
+              <div class="product-body">
+                <h4 class="product-title">গ্যাজেট / ইলেকট্রনিক্স</h4>
+                <p class="product-desc">অডিওবুক শোনা, পড়া বা কাজের সময় ব্যবহারযোগ্য দরকারি gadget ও electronics সংগ্রহ।</p>
+                <div class="product-tags">
+                  <span class="tag">Gadget</span>
+                  <span class="tag">Electronics</span>
+                </div>
+                <div class="auto-link-group">
+                  <a class="btn btn-orange" href="https://rkmri.co/eMRTEllAelSI/" target="_blank">🛍️ প্রোডাক্ট দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnKfMraGzrQKUGAotmlOKNvupUrRWP1zfR3FZ0_LZ4qzQji8hE2T5HOhbfrzoSkzo_i2thwKu6cojTICQ8Os3-835IrkZT-b3sMZWjzT3u0mkqj30PyVrYVveoq0W9l6aIxoPvzX9LyU6BgY6Lmg5Ku-zdI4T_5VBmAZM2gWIBdd_Vau-BxSxH1w6Imbg/s1448/ChatGPT%20Image%20Jun%2026,%202026,%2002_55_32%20PM.png');"></div>
+              <div class="product-body">
+                <h4 class="product-title">ফুড / সুপার স্টোর</h4>
+                <p class="product-desc">খাবার, grocery ও super store-এর প্রয়োজনীয় পণ্য এক জায়গায় দেখুন।</p>
+                <div class="product-tags">
+                  <span class="tag">Food</span>
+                  <span class="tag">Super Store</span>
+                </div>
+                <div class="auto-link-group">
+                  <a class="btn btn-orange" href="https://rkmri.co/3py0IppMT3AE/" target="_blank">🛍️ প্রোডাক্ট দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiM4TyeD341ScRBVozYVMIcLVt7MzKiYUrjXakPU-sLuKrhoQcM8fRBqwwvQLmMAaceGffz2xTVnl_suzT1K0DljDYvkWkJvEBTnDng3iFwkFUC3TsOVnRXy6boQo6yBg_LoPekae2gXSGFC7rkDMIh4cNb15kzaldUQcTWTIUv7uKeJ7mKZhUiAldEhLs/w480-h640/ChatGPT%20Image%20Jun%2026,%202026,%2003_44_02%20PM.png');"></div>
+              <div class="product-body">
+                <h4 class="product-title">লাইফস্টাইল / প্রয়োজনীয় জিনিস</h4>
+                <p class="product-desc">দৈনন্দিন কাজে লাগে lifestyle ও ধর্মীয় চর্চার প্রয়োজনীয় জিনিসপত্রসমূহ।</p>
+                <div class="product-tags">
+                  <span class="tag">Lifestyle</span>
+                  <span class="tag">Essential</span>
+                </div>
+                <div class="auto-link-group">
+                  <a class="btn btn-orange" href="https://rkmri.co/mSERMRpMSpmp/" target="_blank">🛍️ প্রোডাক্ট দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIrbTtJtY6cp-N54wDzG4wDetjCL7LiL5SjDOoeUOfH9AsBXIZ2uofs8M55cfUtE5UhILWsa6OY01r72b-Jn27iHX-d9lAaMSO1fqyjYWp4BwJz_XMhrOjLKiLT3_5ccBYEiGKWjlHR8ZFuIA3ZeapEfHUvVwnjToqfTJvjHoMG6S6OfvGMQj32mbDFDM/w426-h640/ChatGPT%20Image%20Jun%2026,%202026,%2003_12_27%20PM.png');"></div>
+              <div class="product-body">
+                <h4 class="product-title">Kids Zone</h4>
+                <p class="product-desc">শিশুদের বই, খেলনা, learning materials ও শিক্ষামূলক সামগ্রী।</p>
+                <div class="product-tags">
+                  <span class="tag">Kids</span>
+                  <span class="tag">Learning</span>
+                </div>
+                <div class="auto-link-group">
+                  <a class="btn btn-orange" href="https://www.rokomari.com/kids-zone?ref=nm" target="_blank">🛍️ Kids Zone দেখুন</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <button class="slider-arrow next" id="prodNext" aria-label="পরের প্রোডাক্ট">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="container">
+      <div class="section-head">
+        <h3>অডিওবুক / ভিডিও</h3>
+        <div class="divider"></div>
+        <p>আমাদের YouTube চ্যানেলে ইসলামিক অডিওবুক, নবীদের কাহিনী ও জ্ঞানভিত্তিক কনটেন্ট নিয়মিত প্রকাশ করা হয়।</p>
+      </div>
+
+      <div class="video-wrap">
+        <div class="video-grid">
+          <!-- Left Column: Video Player -->
+          <div class="video-box">
+            <div class="video-embed">
+              <iframe id="youtube-player-frame" src="https://www.youtube.com/embed/xkm1J3PYxrE" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Playlist and Tabs -->
+          <div class="playlist-container">
+            <div class="playlist-tabs">
+              <button class="tab-btn active" data-tab="custom-videos" onclick="switchPlaylistTab('videos')">🎥 নির্বাচিত ভিডিও</button>
+              <button class="tab-btn" data-tab="playlists" onclick="switchPlaylistTab('playlists')">📂 প্লেলিস্টসমূহ</button>
+            </div>
+            
+            <!-- Video list tab content -->
+            <div class="playlist-content active" id="tab-videos">
+              <!-- Rendered Dynamically via JS -->
+            </div>
+
+            <!-- Playlist list tab content -->
+            <div class="playlist-content" id="tab-playlists">
+              <!-- Rendered Dynamically via JS -->
+            </div>
+
+            <!-- YouTube Channel Promo banner -->
+            <div class="channel-promo">
+              <div class="channel-promo-text">
+                <h5>MaShaAllah AudiBooks</h5>
+                <p>চ্যানেলটি সাবস্ক্রাইব করে আমাদের দ্বীনি কাজে সাহায্য করুন।</p>
+              </div>
+              <a class="btn btn-primary yt-subscribe" href="https://www.youtube.com/@MaShaAllah_AudiBooks?sub_confirmation=1" target="_blank">▶ সাবস্ক্রাইব</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <h3>এই রিসোর্সগুলো কেন উপকারী?</h3>
+        <div class="divider"></div>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">📖</div><h4>সহীহ ও উপকারী জ্ঞান</h4><p>নির্ভরযোগ্য ইসলামিক বই ও রেফারেন্স থেকে উপকারী জ্ঞান পাওয়া যায়।</p></div>
+        <div class="why-card"><div class="why-icon">🎧</div><h4>অডিওবুক সুবিধা</h4><p>শুনে শিখতে পছন্দ করেন এমন পাঠকদের জন্য অডিওবুক অনেক সুবিধাজনক।</p></div>
+        <div class="why-card"><div class="why-icon">📄</div><h4>PDF + E-Book সুবিধা</h4><p>একই বইয়ের PDF ও E-Book থাকলে পড়া ও রেফারেন্স নেওয়া সহজ হয়।</p></div>
+        <div class="why-card"><div class="why-icon">🛍️</div><h4>দরকারি অন্যান্য প্রোডাক্ট</h4><p>শুধু বই নয়, দরকারি gadget, food ও lifestyle product-ও একসাথে পাওয়া যায়।</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container faq-grid">
+      <div class="faq-box">
+        <h4>সাধারণ জিজ্ঞাসা (FAQ)</h4>
+        
+        <!-- NEW FEATURED FIRST FAQ: ORDER PROCESS & PROMO CODE INSTRUCTIONS -->
+        <details open>
+          <summary>রকমারিতে কীভাবে অর্ডার করব এবং প্রোমো কোড (Promo Code) ব্যবহার করব?</summary>
+          <p>
+            রকমারি থেকে বই বা যেকোনো প্রোডাক্ট অর্ডার করার সময় অতিরিক্ত ছাড় পেতে নিচের সহজ ধাপগুলো অনুসরণ করুন:<br><br>
+            <strong>১. কোড কপির পদ্ধতি:</strong> প্রথমে আমাদের এই পেইজের "চলতি অফার / Promo Codes" সেকশনে যান। আপনার প্রয়োজনীয় অফারটির নিচে থাকা <strong>"কপি করুন"</strong> বাটনে ক্লিক করুন। এতে কোডটি স্বয়ংক্রিয়ভাবে ক্লিপবোর্ডে কপি হয়ে যাবে।<br><br>
+            <strong>২. রকমারিতে প্রবেশ:</strong> এবার আপনার পছন্দের বই বা প্রোডাক্টের নিচে থাকা <strong>"বই দেখুন"</strong> বা <strong>"প্রোডাক্ট দেখুন"</strong> বাটনে ক্লিক করে সরাসরি রকমারির অফিশিয়াল পেজে যান।<br><br>
+            <strong>৩. কার্টে যোগ করুন:</strong> আপনার কাঙ্ক্ষিত পণ্যটি রকমারির কার্টে (Cart/ব্যাগ) যুক্ত করুন এবং <strong>"অর্ডার সম্পন্ন করুন" (Go to Checkout)</strong> বাটনে ক্লিক করুন।<br><br>
+            <strong>৪. কুপন কোড ব্যবহার:</strong> শিপিং ঠিকানা দেওয়ার পর পেমেন্ট পেজে (অথবা অর্ডার সামারি পেজে) <strong>"Promo Code / কুপন কোড ব্যবহার করুন"</strong> বা <strong>"Gift Voucher"</strong> নামক একটি ইনপুট বক্স দেখতে পাবেন। সেখানে আপনার কপি করা কোডটি পেস্ট (Paste) করে <strong>"Apply"</strong> বাটনে ক্লিক করুন।<br><br>
+            <strong>৫. অতিরিক্ত ছাড় লাভ:</strong> কুপনটি দেওয়ার সাথে সাথেই আপনার বিলের ওপর <strong>অতিরিক্ত ৫% বা তার বেশি স্পেশাল ডিসকাউন্ট যুক্ত হয়ে যাবে ইনশাআল্লাহ!</strong> এবার পেমেন্ট পদ্ধতি সিলেক্ট করে অর্ডারটি নিশ্চিত করলেই আপনার কাজ শেষ।
+          </p>
+        </details>
+
+        <details><summary>এই পেইজের বইগুলো কোথা থেকে দেখব?</summary><p>প্রতিটি বইয়ের নিচে দেওয়া “বই দেখুন” বাটনে ক্লিক করলে সংশ্লিষ্ট বইয়ের পেইজে যেতে পারবেন।</p></details>
+        <details><summary>অডিওবুক কোথায় শুনব?</summary><p>যে বইয়ের অডিও লিংক আছে, সেখানে “অডিওবুক শুনুন” বাটনে ক্লিক করলে সংশ্লিষ্ট ভিডিও/প্লেলিস্টে যেতে পারবেন।</p></details>
+        <details><summary>PDF কোথায় পাব?</summary><p>যে বইয়ের PDF আছে, “PDF” বাটনে ক্লিক করলে PDF সেকশনে সেই বইয়ের..." বাটনে ক্লিক করার সাথে সাথে PDF সেকশনে নিয়ে যাওয়া হবে।</p></details>
+        <details><summary>E-Book কোথায় পাব?</summary><p>যে বইয়ের E-Book আছে, “E-Book” বাটনে ক্লিক করলে E-Book সেকশনে সেই বইয়ের..." বাটনে ক্লিক করার সাথে সাথে E-Book সেকশনে নিয়ে যাওয়া হবে।</p></details>
+      </div>
+
+      <div class="note-box">
+        <h4>গুরুত্বপূর্ণ তথ্য</h4>
+        <p>এই পেইজে থাকা কিছু লিংক <strong>affiliate link</strong> হতে পারে। আপনি এই লিংকের মাধ্যমে কিছু কিনলে/দেখলে আমরা অতিরিক্ত কোনো খরচ ছাড়াই কমিশন পেতে পারি।</p>
+        <p>এটি আমাদেরকে আরও উপকারী ইসলামিক কনটেন্ট, অডিওবুক, বইয়ের রিসোর্স এবং দরকারি প্রোডাক্ট সাজিয়ে দিতে সহায়তা করে।</p>
+
+        <h4 style="margin-top:28px;">আমাদের সম্পর্কে</h4>
+        <p><strong>Mashaallah AudiBooks</strong> হলো একটি ইসলামিক অডিওবুক ও জ্ঞানভিত্তিক প্ল্যাটফর্ম, যেখানে ইসলামিক বই, অডিওবুক, PDF, E-Book এবং প্রয়োজনীয় অন্যান্য রিসোর্স/প্রোডাক্ট একসাথে উপস্থাপন করা হয়।</p>
+      </div>
+    </div>
+  </section>
+
+  <header class="topbar" style="box-shadow: none; border-top: 1px solid #e6ece9;">
+    <!-- Minimal clean alignment spacer -->
+  </header>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-card">
+          <h4>গুরুত্বপূর্ণ তথ্য</h4>
+          <p>এই সাইটে থাকা কিছু লিংক অ্যাফিলিয়েট লিংক হতে পারে। আপনি এই লিংকের মাধ্যমে কিছু কিনলে/দেখলে আমরা কমিশন পেতে পারি।</p>
+          <p><strong>আপনাদের সহযোগিতাই আমাদের অনুপ্রেরণা।</strong></p>
+        </div>
+
+        <div class="footer-card">
+          <h4>দ্রুত লিংক</h4>
+          <ul class="footer-links">
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#books">বইয়ের তালিকা</a></li>
+            <li><a href="#pdfs">PDF</a></li>
+            <li><a href="#ebooks">E-Book</a></li>
+            <li><a href="#products">অন্যান্য প্রোডাক্ট</a></li>
+            <li><a href="#promo">অফার</a></li>
+            <li><a href="#videos">ভিডিও</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-card">
+          <h4>আমাদের চ্যানেল ও পেজ</h4>
+          <div class="social-brand-list">
+            <a class="social-brand" href="https://www.youtube.com/@MaShaAllah_AudiBooks" target="_blank">
+              <div class="social-icon">▶</div>
+              <div><strong>MaShaAllah AudiBooks</strong><span>YouTube Channel</span></div>
+            </a>
+            <a class="social-brand" href="https://mahfil.net/channel/OJi7Ff6WOh1uLJc" target="_blank">
+              <div class="social-icon">🎙️</div>
+              <div><strong>MaShaAllah AudiBooks</strong><span>Mahfil Channel</span></div>
+            </a>
+            <a class="social-brand" href="https://facebook.com/MaShaAllahAudiBooks" target="_blank">
+              <div class="social-icon">f</div>
+              <div><strong>MaShaAllah AudiBooks</strong><span>Facebook Page</span></div>
+            </a>
+            <a class="social-brand" href="https://hikmah.net/@mashaallah_audibooks" target="_blank">
+              <div class="social-icon">📘</div>
+              <div><strong>MaShaAllah AudiBooks</strong><span>Hikma Page</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Mashaallah AudiBooks — সর্বস্বত্ব সংরক্ষিত।</div>
+        <div>আল্লাহ আমাদের সবাইকে উপকারী জ্ঞানের তৌফিক দান করুন। আমিন।</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copy-toast" id="copyToast">
+    <strong id="copyToastTitle">কোড কপি হয়েছে</strong>
+    <span id="copyToastText">চেকআউটের সময় কোডটি ব্যবহার করুন</span>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // E-Book master featured page link
+      const ALL_EBOOKS_LINK = "https://rkmri.co/A3om0S3M3oeo/";
+
+      const books = [...document.querySelectorAll(".js-book")];
+      const pdfGrid = document.getElementById("pdf-resource-grid");
+      const ebookGrid = document.getElementById("ebook-resource-grid");
+      const pdfSection = document.getElementById("pdfs");
+      const ebookSection = document.getElementById("ebooks");
+
+      // Global reference object to store initialized slider instances
+      const sliderInstances = {};
+
+      function isEmptyLink(link){
+        if(!link) return true;
+        const v = String(link).trim();
+        return v === "" || v === "#" || v.toLowerCase() === "null" || v.startsWith("YOUR_") || v.startsWith("undefined");
+      }
+
+      // Automatically adjust layout dynamically based on available buttons count
+      const groups = document.querySelectorAll(".auto-link-group");
+      groups.forEach(group => {
+        const links = [...group.querySelectorAll("a")];
+        links.forEach(link => {
+          const href = (link.getAttribute("href") || "").trim();
+          if (isEmptyLink(href)) link.style.display = "none";
+        });
+
+        const visibleLinks = links.filter(link => link.style.display !== "none");
+        const count = visibleLinks.length;
+        group.classList.remove("cols-1", "cols-2", "cols-3", "cols-4");
+
+        if (count === 0) group.style.display = "none";
+        else if (count === 1) group.classList.add("cols-1");
+        else if (count === 2) group.classList.add("cols-2");
+        else if (count === 3) group.classList.add("cols-3");
+        else group.classList.add("cols-4");
+      });
+
+      const pdfItems = [];
+      const ebookItems = [];
+
+      books.forEach(book => {
+        const item = {
+          id: book.dataset.bookId || "",
+          title: book.dataset.title || "",
+          author: book.dataset.author || "",
+          desc: book.dataset.desc || "",
+          pdf: book.dataset.pdfLink || "",
+          ebook: book.dataset.ebookLink || "",
+          bookLink: book.dataset.bookLink || ""
+        };
+
+        if (!isEmptyLink(item.pdf)) pdfItems.push(item);
+        if (!isEmptyLink(item.ebook)) ebookItems.push(item);
+      });
+
+      // Dynamic Card Generator with direct "View Book" option as well
+      function createResourceCard(item, type){
+        const isPdf = type === "pdf";
+        const card = document.createElement("div");
+        card.className = "resource-card";
+        card.dataset.bookId = item.id;
+        card.dataset.type = type;
+
+        const icon = isPdf ? "📄" : "📘";
+        const iconStyle = isPdf ? "" : 'style="color:#7c3aed;background:linear-gradient(135deg,#f5edff,#faf5ff);border-color:#eadcff;"';
+        const titleSuffix = isPdf ? "PDF" : "E-Book";
+        const mainLink = isPdf ? item.pdf : item.ebook;
+        const btnClass = isPdf ? "btn-blue" : "btn-purple";
+        const btnText = isPdf ? "📄 PDF দেখুন" : "📘 E-Book দেখুন";
+
+        let bookBtnHtml = "";
+        if (!isEmptyLink(item.bookLink)) {
+          bookBtnHtml = `<a class="btn btn-primary" href="${item.bookLink}" target="_blank">📚 বই দেখুন</a>`;
+        }
+
+        const btnCount = !isEmptyLink(item.bookLink) ? 2 : 1;
+        const colsClass = btnCount === 2 ? "cols-2" : "cols-1";
+
+        card.innerHTML = `
+          <div class="resource-icon" ${iconStyle}>${icon}</div>
+          <div class="resource-body">
+            <h4 class="resource-title">${item.title} — ${titleSuffix}</h4>
+            <p class="resource-meta">লেখক: ${item.author || "—"}</p>
+            <p class="resource-desc">${item.desc || ""}</p>
+            <div class="auto-link-group ${colsClass}">
+              ${bookBtnHtml}
+              <a class="btn ${btnClass}" href="${mainLink}" target="_blank">${btnText}</a>
+            </div>
+          </div>
+        `;
+        return card;
+      }
+
+      function createAllEbooksCard(){
+        if (isEmptyLink(ALL_EBOOKS_LINK)) return null;
+        const card = document.createElement("div");
+        card.className = "resource-card resource-top-card";
+        card.innerHTML = `
+          <div class="book-cover" style="background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7QuKhRQiRmzd70jYF14qwQzea-Bg-qGnYd5oBQlLqXDmWGAT-Nlw4jm_mtsiWUx-Sihws5sy7i4vbEXcWWReKcPppemPblXgxfNW32h_iCM-TAK_e8wQzLKumTgHrU2zUUpDc4qwkCwOBJb-O1EFsPGTAdcnDpQfNrBxp7BYNTL7fN_oMZj-DAJrBVNo/s1448/ChatGPT%20Image%20Jun%2026,%202026,%2003_31_58%20PM.png'); height:180px; background-size:cover; background-position:center;"></div>
+          <div class="resource-body">
+            <h4 class="resource-title" style="color:var(--purple); display:flex; align-items:center; gap:8px;">📚 সকল E-Book একসাথে</h4>
+            <p class="resource-desc">রকমারি ই-বুক সেকশনের বাছাইকৃত সকল ই-বুক এবং চমৎকার এক্সক্লুসিভ সংগ্রহগুলো এক জায়গা থেকে ব্রাউজ করুন।</p>
+            <div class="auto-link-group cols-1">
+              <a class="btn btn-purple" href="${ALL_EBOOKS_LINK}" target="_blank">📘 সব E-Book দেখুন</a>
+            </div>
+          </div>
+        `;
+        return card;
+      }
+
+      // PDF Grid Population and Slider Initialization
+      if (pdfItems.length) {
+        pdfItems.forEach(item => pdfGrid.appendChild(createResourceCard(item, "pdf")));
+        initBookSlider("pdf-resource-grid", "pdfPrev", "pdfNext");
+      } else {
+        pdfSection.classList.add("is-hidden");
+      }
+
+      // E-Book Grid Population and Slider Initialization with Featured Sokol Card inserted first
+      const allEbooksCard = createAllEbooksCard();
+      if (allEbooksCard) ebookGrid.appendChild(allEbooksCard);
+
+      if (ebookItems.length) {
+        ebookItems.forEach(item => ebookGrid.appendChild(createResourceCard(item, "ebook")));
+      }
+      
+      if (ebookItems.length || allEbooksCard) {
+        initBookSlider("ebook-resource-grid", "ebookPrev", "ebookNext");
+      } else {
+        ebookSection.classList.add("is-hidden");
+      }
+
+      // Global Highlight Function
+      function clearHighlights(sectionEl){
+        sectionEl.querySelectorAll(".resource-card.is-target").forEach(card => card.classList.remove("is-target"));
+      }
+
+      // Intelligent Slider Navigation Scroll-to-target handler
+      function scrollToTarget(sectionId, bookId, type){
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+        const selector = `.resource-card[data-book-id="${bookId}"][data-type="${type}"]`;
+        const targetCard = section.querySelector(selector);
+        if (!targetCard) return;
+
+        // Auto-Slide the slider containing the target card to correct index
+        const sliderEl = section.querySelector('.books-slider');
+        if (sliderEl && sliderInstances[sliderEl.id]) {
+          const instance = sliderInstances[sliderEl.id];
+          const cardIndex = instance.cards.indexOf(targetCard);
+          if (cardIndex !== -1) {
+            instance.slideToIndex(cardIndex);
+          }
+        }
+
+        clearHighlights(section);
+        targetCard.classList.add("is-target");
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(() => targetCard.scrollIntoView({ behavior: "smooth", block: "center" }), 250);
+        setTimeout(() => targetCard.classList.remove("is-target"), 4500);
+      }
+
+      document.querySelectorAll(".js-pdf-jump").forEach(btn => {
+        const href = (btn.getAttribute("href") || "").trim();
+        if (isEmptyLink(href)) return;
+        btn.addEventListener("click", function(e){
+          e.preventDefault();
+          scrollToTarget("pdfs", btn.dataset.bookId, "pdf");
+        });
+      });
+
+      document.querySelectorAll(".js-ebook-jump").forEach(btn => {
+        const href = (btn.getAttribute("href") || "").trim();
+        if (isEmptyLink(href)) return;
+        btn.addEventListener("click", function(e){
+          e.preventDefault();
+          scrollToTarget("ebooks", btn.dataset.bookId, "ebook");
+        });
+      });
+
+      // Toasts System
+      const toast = document.getElementById("copyToast");
+      const toastTitle = document.getElementById("copyToastTitle");
+      const toastText = document.getElementById("copyToastText");
+      let toastTimer = null;
+
+      function showCopyToast(title, text){
+        if(!toast) return;
+        toastTitle.textContent = title || "কোড কপি হয়েছে";
+        toastText.textContent = text || "চেকআউটের সময় কোডটি ব্যবহার করুন";
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+      }
+
+      // Clipboard copy utility fallback
+      async function copyPromoCode(code){
+        if(!code) return false;
+        try{
+          await navigator.clipboard.writeText(code);
+          return true;
+        }catch(err){
+          try{
+            const temp = document.createElement("input");
+            temp.value = code;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            return true;
+          }catch(e){
+            return false;
+          }
+        }
+      }
+
+      document.querySelectorAll(".promo-copy-btn").forEach(btn => {
+        btn.addEventListener("click", async function(e){
+          e.preventDefault();
+          const code = btn.dataset.code || "";
+          const href = btn.getAttribute("href") || "";
+          const target = btn.dataset.target || "";
+          const customToast = btn.dataset.toast || "কোড কপি হয়েছে";
+
+          const copied = await copyPromoCode(code);
+
+          if(copied){
+            showCopyToast(`${customToast}: ${code}`,"চেকআউটের সময় কোডটি paste করে ব্যবহার করুন");
+          }else{
+            showCopyToast("কোড কপি করা যায়নি","অনুগ্রহ করে কোডটি ম্যানুয়ালি কপি করুন");
+          }
+
+          setTimeout(() => {
+            if(target && target.startsWith("#")){
+              const targetEl = document.querySelector(target);
+              if(targetEl){
+                targetEl.scrollIntoView({ behavior:"smooth", block:"start" });
+                return;
+              }
+            }
+            if(href && href !== "#" && !href.startsWith("YOUR_")) window.open(href, "_blank");
+          }, 450);
+        });
+      });
+
+      // Universal Slider Engine Supporting Swipe Gestures & Custom Dynamic Targets (Adjusted to support 4-item scaling)
+      function initBookSlider(sliderId, prevId, nextId){
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
+        if(!slider || !prevBtn || !nextBtn) return;
+
+        const cards = [...slider.children];
+        if (cards.length === 0) return;
+
+        let currentIndex = 0;
+
+        // Matches media-queries strictly to prevent dynamic calculation offsets
+        function getVisibleCount(){
+          if(window.innerWidth <= 680) return 1;
+          if(window.innerWidth <= 1024) return 2;
+          if(window.innerWidth <= 1280) return 3;
+          return 4; // Tall elongated 4 column layout on wide screens
+        }
+
+        function getGap(){
+          return 22;
+        }
+
+        // Calculates dynamic maximum scroll offset perfectly matching columns width
+        function getMaxIndex(){
+          return Math.max(0, cards.length - getVisibleCount());
+        }
+
+        function updateSlider(){
+          if(!cards.length) return;
+          const cardWidth = cards[0].offsetWidth;
+          const step = cardWidth + getGap();
+          slider.style.transform = `translateX(-${currentIndex * step}px)`;
+
+          const maxIndex = getMaxIndex();
+
+          // Hide arrows completely if items are insufficient to scroll
+          if (maxIndex === 0) {
+            prevBtn.style.opacity = "0";
+            prevBtn.style.pointerEvents = "none";
+            nextBtn.style.opacity = "0";
+            nextBtn.style.pointerEvents = "none";
+            return;
+          }
+
+          prevBtn.style.opacity = currentIndex === 0 ? "0.45" : "1";
+          prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+
+          nextBtn.style.opacity = currentIndex >= maxIndex ? "0.45" : "1";
+          nextBtn.style.pointerEvents = currentIndex >= maxIndex ? "none" : "auto";
+        }
+
+        prevBtn.addEventListener("click", () => {
+          if(currentIndex > 0){
+            currentIndex--;
+            updateSlider();
+          }
+        });
+
+        nextBtn.addEventListener("click", () => {
+          const maxIndex = getMaxIndex();
+          if(currentIndex < maxIndex){
+            currentIndex++;
+            updateSlider();
+          }
+        });
+
+        // Responsive Resizing Adjustments
+        window.addEventListener("resize", () => {
+          const maxIndex = getMaxIndex();
+          if(currentIndex > maxIndex) currentIndex = maxIndex;
+          updateSlider();
+        });
+
+        // Advanced Mobile Swipe Gesture Handlers
+        let startX = 0;
+        let diffX = 0;
+
+        slider.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        slider.addEventListener("touchmove", (e) => {
+          diffX = e.touches[0].clientX - startX;
+        }, { passive: true });
+
+        slider.addEventListener("touchend", () => {
+          const swipeThreshold = 50;
+          if (Math.abs(diffX) > swipeThreshold) {
+            if (diffX < 0) {
+              // Swiped Left -> Move Next
+              const maxIndex = getMaxIndex();
+              if(currentIndex < maxIndex){
+                currentIndex++;
+                updateSlider();
+              }
+            } else {
+              // Swiped Right -> Move Prev
+              if(currentIndex > 0){
+                currentIndex--;
+                updateSlider();
+              }
+            }
+          }
+          diffX = 0; // Reset
+        }, { passive: true });
+
+        updateSlider();
+
+        // Save slider handle globally for scroll jump synchronization
+        sliderInstances[sliderId] = {
+          cards: cards,
+          slideToIndex: function(index) {
+            const maxIndex = getMaxIndex();
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            updateSlider();
+          }
+        };
+      }
+
+      // Initializing Book and Category Sliders (Now including productsSlider!)
+      initBookSlider("topBooksSlider", "topPrev", "topNext");
+      initBookSlider("middleBooksSlider", "middlePrev", "middleNext");
+      initBookSlider("bottomBooksSlider", "bottomPrev", "bottomNext");
+      initBookSlider("promoSlider", "promoPrev", "promoNext");
+      initBookSlider("productsSlider", "prodPrev", "prodNext");
+
+      const playlistVideos = [
+        { title: "পবিত্র কুরআনে বর্ণিত ২৫ জন নবীর জীবনী - ঘোষণা পর্ব | Nobider Jiboni", id: "xkm1J3PYxrE", duration: "5:59" },
+        { title: "হযরত আদম (আঃ) | পর্ব-১ | মানব সৃষ্টির সূচনা ও ইবলিসের অহংকার", id: "K30H13fD-DM", duration: "8:38" },
+        { title: "হযরত আদম (আঃ) | পর্ব-২ | আহদে আলাস্তু কী? মানুষের প্রথম অঙ্গীকার", id: "WIYLZfXIpto", duration: "20:14" },
+        { title: "আদম (আঃ) পর্ব-৩ | হাবীল ও কাবীলের কাহিনী | প্রথম হত্যাকাণ্ড", id: "re6lYnRQNNE", duration: "16:59" },
+        { title: "হযরত নূহ (আঃ) পর্ব -১ | মূর্তি তৈরির ইতিহাস , শিরকের সূচনা, দাওয়াত", id: "GB4Wck-7NBE", duration: "16:29" },
+        { title: "হযরত নূহ (আঃ) | শেষ পর্ব | মহাপ্লাবন, নৌকা, কেনআনের মৃত্যু ও শিক্ষণীয় ঘটনা | নবীদের কাহিনী | MaShaAllah AudiBooks", id: "xdTXDFC8VHk", duration: "12:32" }
+      ];
+
+      const youtubePlaylists = [
+        { title: "কুরআনে বর্ণিত ১-১২ জন নবীর জীবনী (১ম খণ্ড)", id: "PLjn4R4gw9CRZXVPb7v-0QEnwyvaEn4IKA" },
+        { title: "সাহাবিদের ঈমানদীপ্ত জীবন-সংক্ষিপ্ত", id: "PLjn4R4gw9CRaDcR9EIAAugSnKt1AbXReP" },
+        { title: "হাদিসের গল্প | Stories from Sahih Hadith", id: "PLjn4R4gw9CRaZTBzuWNZ1fx76YlJmKiH6" }
+      ];
+
+      const videoPlayer = document.getElementById("youtube-player-frame");
+      const videoTab = document.getElementById("tab-videos");
+      const playlistTab = document.getElementById("tab-playlists");
+
+      // Set default player source to the first chronological video
+      videoPlayer.src = "https://www.youtube.com/embed/xkm1J3PYxrE";
+
+      // Function to render custom videos under selected video tab
+      function renderVideos() {
+        videoTab.innerHTML = "";
+        playlistVideos.forEach((vid, index) => {
+          const item = document.createElement("div");
+          item.className = `playlist-item ${index === 0 ? "active" : ""}`;
+          item.innerHTML = `
+            <div class="playlist-item-title">
+              <span class="active-indicator">${index === 0 ? '<span class="live-pulse"></span>' : '🎬'}</span>
+              <span>${vid.title}</span>
+            </div>
+            <span class="playlist-item-meta">${vid.duration}</span>
+          `;
+          item.addEventListener("click", () => {
+            // Update Iframe src
+            videoPlayer.src = `https://www.youtube.com/embed/${vid.id}?autoplay=1`;
+            // Update active indicator styling
+            document.querySelectorAll("#tab-videos .playlist-item").forEach(el => el.classList.remove("active"));
+            document.querySelectorAll("#tab-videos .playlist-item .active-indicator").forEach(el => el.innerHTML = "🎬");
+            item.classList.add("active");
+            item.querySelector(".active-indicator").innerHTML = '<span class="live-pulse"></span>';
+          });
+          videoTab.appendChild(item);
+        });
+      }
+
+      // Function to render Youtube Channel Playlists under playlists tab
+      function renderPlaylists() {
+        playlistTab.innerHTML = "";
+        youtubePlaylists.forEach((list) => {
+          const item = document.createElement("div");
+          item.className = "playlist-item";
+          item.innerHTML = `
+            <div class="playlist-item-title">
+              <span>📂</span>
+              <span>${list.title}</span>
+            </div>
+            <span class="playlist-item-meta">পূর্ণ প্লেলিস্ট</span>
+          `;
+          item.addEventListener("click", () => {
+            // Update Iframe src to load the entire play list
+            videoPlayer.src = `https://www.youtube.com/embed/videoseries?list=${list.id}&autoplay=1`;
+            // Update active styling
+            document.querySelectorAll("#tab-playlists .playlist-item").forEach(el => el.classList.remove("active"));
+            item.classList.add("active");
+          });
+          playlistTab.appendChild(item);
+        });
+      }
+
+      // Initial Call to load content dynamically
+      renderVideos();
+      renderPlaylists();
+
+      // Exposed global function for switching tabs
+      window.switchPlaylistTab = function(tabName) {
+        document.querySelectorAll(".playlist-tabs .tab-btn").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".playlist-content").forEach(content => content.classList.remove("active"));
+
+        if (tabName === "videos") {
+          document.querySelector('.playlist-tabs .tab-btn[data-tab="custom-videos"]').classList.add("active");
+          document.getElementById("tab-videos").classList.add("active");
+        } else {
+          document.querySelector('.playlist-tabs .tab-btn[data-tab="playlists"]').classList.add("active");
+          document.getElementById("tab-playlists").classList.add("active");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
