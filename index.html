@@ -69,14 +69,14 @@
       transform: scale(0.95);
     }
     
-    /* Elegant 3D tactile card movements on hover - replaced wiggle/shaking with smooth glide up */
+    /* Premium border transition on hover with no vertical movement */
     .book-card, .product-card, .promo-card, .resource-card {
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
-      will-change: transform, box-shadow;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      will-change: border-color, box-shadow;
     }
     .book-card:hover, .product-card:hover, .promo-card:hover, .resource-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px -5px rgba(15, 79, 63, 0.15), 0 10px 10px -5px rgba(15, 79, 63, 0.05);
+      border-color: #0f4f3f; /* brand-green border style on hover */
+      box-shadow: 0 10px 15px -3px rgba(15, 79, 63, 0.1);
     }
     
     /* Elongated book cover style */
@@ -332,7 +332,7 @@
   <section class="py-6 bg-[#ebf0ee] border-b border-gray-250">
     <div class="max-w-[1320px] mx-auto px-4">
       <h3 class="text-md font-bold text-brand-greenDark mb-4 flex items-center gap-2">
-        <span>📂</span> ক্যাটাগরি অনুযায়ী ব্রাউজ করুন (Shop by Category Slider)
+        <span>📂</span> ক্যাটাগরি অনুযায়ী ব্রাউজ করুন (Shop by Category)
       </h3>
       
       <!-- Scrollable Category Row wrapper with custom sliding buttons -->
@@ -682,7 +682,6 @@
                 </div>
               </article>
 
-
               <!-- Book B: স্টোরিজ ফ্রম সহিহ বুখারি- হাদিসের গল্প-১ -->
               <article class="book-card js-book flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-17px)] bg-white border border-gray-100 shadow-sm rounded-2xl flex flex-col justify-between"
                 data-book-id="new-book-b"
@@ -738,6 +737,90 @@
                     </div>
                     <div class="grid grid-cols-1 gap-1.5">
                       <a class="btn-tactile w-full py-2 bg-brand-purple text-white text-xs font-bold rounded-lg text-center js-ebook-jump" href="https://rkmri.co/IoARoeMSeeTR/" data-book-id="new-book-c">📘 E-Book দেখুন</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Book D: সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ১ম খণ্ড -->
+              <article class="book-card js-book flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-17px)] bg-white border border-gray-100 shadow-sm rounded-2xl flex flex-col justify-between"
+                data-book-id="sahaba-life-1"
+                data-title="সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ১ম খণ্ড"
+                data-author="ড. আব্দুর রহমান রাফাত পাশা রহ | অনুবাদ: মাওলানা মাসউদুর রহমান"
+                data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQx-F-A01l6CGG2UE9lbnUUXT-cZ9V6gZJcixGZcq2mZl8psXkkC7cCGUUp10_ndF8il6dIhxEeMfCs6uxwW-dOhyUS8EC5OVEA0NDv6WaBfhnqwfpH03eaYiiWQ02DMbF6eyq4DiBOw8peIgscprOyIIWA2X3s8Z_MVgJs5VsJ4Py9w606ijIkMySwQ/w420-h640/images%2520(5).jpg"
+                data-book-link="https://rkmri.co/N3NeAe3SE2AM/"
+                data-audio-link=""
+                data-pdf-link=""
+                data-ebook-link=""
+                data-desc="সাহাবায়ে কেরামের সোনালী যুগের পরম ত্যাগ, সত্যের পথে অটল থাকা ও ঈমানদীপ্ত চমকপ্রদ জীবনগাথা।">
+                <div class="book-cover h-[280px] bg-slate-50 flex-shrink-0 flex items-center justify-center p-3 border-b border-gray-100 rounded-t-2xl">
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQx-F-A01l6CGG2UE9lbnUUXT-cZ9V6gZJcixGZcq2mZl8psXkkC7cCGUUp10_ndF8il6dIhxEeMfCs6uxwW-dOhyUS8EC5OVEA0NDv6WaBfhnqwfpH03eaYiiWQ02DMbF6eyq4DiBOw8peIgscprOyIIWA2X3s8Z_MVgJs5VsJ4Py9w606ijIkMySwQ/w420-h640/images%2520(5).jpg" alt="সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ১ম খণ্ড" class="max-h-full max-w-full object-contain shadow-sm rounded">
+                </div>
+                <div class="book-body p-4 flex flex-col gap-3">
+                  <h4 class="book-title text-md font-bold text-brand-greenDark truncate-2-lines">সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ১ম খণ্ড</h4>
+                  <p class="book-meta text-xs text-brand-muted truncate">ড. আব্দুর রহমান রাফাত পাশা রহ | মাসউদুর রহমান</p>
+                  <p class="book-desc text-xs text-gray-600 truncate-2-lines">সাহাবায়ে কেরামের সোনালী যুগের পরম ত্যাগ, সত্যের পথে অটল থাকা ও ঈমানদীপ্ত চমকপ্রদ জীবনগাথা।</p>
+                  <div class="book-tags flex gap-1.5 flex-wrap"><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">সাহাবী</span><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">জীবনী</span></div>
+                  <div class="auto-link-group flex flex-col gap-1.5 mt-auto">
+                    <div class="grid grid-cols-1 gap-1.5">
+                      <a class="btn-tactile w-full py-2 bg-brand-green text-white text-xs font-bold rounded-lg text-center" href="https://rkmri.co/N3NeAe3SE2AM/" target="_blank">📚 বই দেখুন</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Book E: সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ২য় খণ্ড -->
+              <article class="book-card js-book flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-17px)] bg-white border border-gray-100 shadow-sm rounded-2xl flex flex-col justify-between"
+                data-book-id="sahaba-life-2"
+                data-title="সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ২য় খণ্ড"
+                data-author="ড. আব্দুর রহমান রাফাত পাশা রহ | অনুবাদ: মাওলানা মাসউদুর রহমান"
+                data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQx-F-A01l6CGG2UE9lbnUUXT-cZ9V6gZJcixGZcq2mZl8psXkkC7cCGUUp10_ndF8il6dIhxEeMfCs6uxwW-dOhyUS8EC5OVEA0NDv6WaBfhnqwfpH03eaYiiWQ02DMbF6eyq4DiBOw8peIgscprOyIIWA2X3s8Z_MVgJs5VsJ4Py9w606ijIkMySwQ/w420-h640/images%2520(5).jpg"
+                data-book-link="https://rkmri.co/l2MIIMIeeyNe/"
+                data-audio-link=""
+                data-pdf-link=""
+                data-ebook-link=""
+                data-desc="সাহাবায়ে কেরামের জীবনগাথা ও ইসলামের গৌরবময় বিজয়ে তাদের অবদানের বিস্ময়কর জীবন্ত ইতিহাস।">
+                <div class="book-cover h-[280px] bg-slate-50 flex-shrink-0 flex items-center justify-center p-3 border-b border-gray-100 rounded-t-2xl">
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQx-F-A01l6CGG2UE9lbnUUXT-cZ9V6gZJcixGZcq2mZl8psXkkC7cCGUUp10_ndF8il6dIhxEeMfCs6uxwW-dOhyUS8EC5OVEA0NDv6WaBfhnqwfpH03eaYiiWQ02DMbF6eyq4DiBOw8peIgscprOyIIWA2X3s8Z_MVgJs5VsJ4Py9w606ijIkMySwQ/w420-h640/images%2520(5).jpg" alt="সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ২য় খণ্ড" class="max-h-full max-w-full object-contain shadow-sm rounded">
+                </div>
+                <div class="book-body p-4 flex flex-col gap-3">
+                  <h4 class="book-title text-md font-bold text-brand-greenDark truncate-2-lines">সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ২য় খণ্ড</h4>
+                  <p class="book-meta text-xs text-brand-muted truncate">ড. আব্দুর রহমান রাফাত পাশা রহ | মাসউদুর রহমান</p>
+                  <p class="book-desc text-xs text-gray-600 truncate-2-lines">সাহাবায়ে কেরামের জীবনগাথা ও ইসলামের গৌরবময় বিজয়ে তাদের অবদানের বিস্ময়কর জীবন্ত ইতিহাস।</p>
+                  <div class="book-tags flex gap-1.5 flex-wrap"><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">সাহাবী</span><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">জীবনী</span></div>
+                  <div class="auto-link-group flex flex-col gap-1.5 mt-auto">
+                    <div class="grid grid-cols-1 gap-1.5">
+                      <a class="btn-tactile w-full py-2 bg-brand-green text-white text-xs font-bold rounded-lg text-center" href="https://rkmri.co/l2MIIMIeeyNe/" target="_blank">📚 বই দেখুন</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Book F: নারী সাহাবীদের ঈমানদীপ্ত জীবন -->
+              <article class="book-card js-book flex-shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-17px)] bg-white border border-gray-100 shadow-sm rounded-2xl flex flex-col justify-between"
+                data-book-id="sahaba-women"
+                data-title="নারী সাহাবীদের ঈমানদীপ্ত জীবন"
+                data-author="ড. আব্দুর রহমান রাফাত পাশা রহ | অনুবাদ: মাওলানা মাসউদুর রহমান"
+                data-cover="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1xyma9JOSlUjJ_AJbX11f44gBsgKhC4oY909kvcfewx3D5KUQQJRf0qRvZGb4Z2nYGPrm-SGnPxRQqH09IuPacmLb6n-02I0JLWBl0hEZgn4EVNGwj9DaqsOE-s0tQeB-d9cXsyiLYjLWaRCvkoI364ue6O-Txb50fvj-oztcNonWMknBlytbFvaJ124/w456-h640/Screenshot_61.jpg"
+                data-book-link="https://rkmri.co/eRmolIeMS0Ne/"
+                data-audio-link=""
+                data-pdf-link=""
+                data-ebook-link="https://rkmri.co/eRmolIeMS0Ne/"
+                data-desc="মহীয়সী ও বীর নারী সাহাবীদের অসামান্য বীরত্ব, পুণ্যময় জীবন ও ইসলামের ইতিহাসে তাদের গৌরবময় আত্মত্যাগের উপাখ্যান।">
+                <div class="book-cover h-[280px] bg-slate-50 flex-shrink-0 flex items-center justify-center p-3 border-b border-gray-100 rounded-t-2xl">
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1xyma9JOSlUjJ_AJbX11f44gBsgKhC4oY909kvcfewx3D5KUQQJRf0qRvZGb4Z2nYGPrm-SGnPxRQqH09IuPacmLb6n-02I0JLWBl0hEZgn4EVNGwj9DaqsOE-s0tQeB-d9cXsyiLYjLWaRCvkoI364ue6O-Txb50fvj-oztcNonWMknBlytbFvaJ124/w456-h640/Screenshot_61.jpg" alt="নারী সাহাবীদের ঈমানদীপ্ত জীবন" class="max-h-full max-w-full object-contain shadow-sm rounded">
+                </div>
+                <div class="book-body p-4 flex flex-col gap-3">
+                  <h4 class="book-title text-md font-bold text-brand-greenDark truncate-2-lines">নারী সাহাবীদের ঈমানদীপ্ত জীবন</h4>
+                  <p class="book-meta text-xs text-brand-muted truncate">ড. আব্দুর রহমান রাফাত পাশা রহ | মাসউদুর রহমান</p>
+                  <p class="book-desc text-xs text-gray-600 truncate-2-lines">মহীয়সী ও বীর নারী সাহাবীদের অসামান্য বীরত্ব, পুণ্যময় জীবন ও ইসলামের ইতিহাসে তাদের গৌরবময় আত্মত্যাগের উপাখ্যান।</p>
+                  <div class="book-tags flex gap-1.5 flex-wrap"><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">নারী সাহাবী</span><span class="tag text-[11px] bg-emerald-50 text-brand-green px-2 py-0.5 rounded-full border border-emerald-100">জীবনী</span></div>
+                  <div class="auto-link-group flex flex-col gap-1.5 mt-auto">
+                    <div class="grid grid-cols-1 gap-1.5">
+                      <a class="btn-tactile w-full py-2 bg-brand-green text-white text-xs font-bold rounded-lg text-center" href="https://rkmri.co/eRmolIeMS0Ne/" target="_blank">📚 বই দেখুন</a>
+                    </div>
+                    <div class="grid grid-cols-1 gap-1.5">
+                      <a class="btn-tactile w-full py-2 bg-brand-purple text-white text-xs font-bold rounded-lg text-center js-ebook-jump" href="https://rkmri.co/eRmolIeMS0Ne/" data-book-id="sahaba-women">📘 E-Book</a>
                     </div>
                   </div>
                 </div>
@@ -1293,7 +1376,7 @@
     <div class="container mx-auto px-4">
       <div class="section-head text-center mb-6">
         <div class="flex justify-center mb-2">
-          <img src="https://placehold.co/48x48/ffffff/0f4f3f?text=🎧" alt="🎧" class="w-12 h-12 object-contain rounded-full shadow-sm" onerror="this.outerHTML='<span class=\"text-4xl\">🎧</span>'">
+          <span class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-3xl shadow-sm border border-gray-100">🎧</span>
         </div>
         <h3 class="text-3xl font-black text-brand-greenDark">ফ্রী অডিওবুক লাইব্রেরি</h3>
         <p class="text-brand-muted mt-1">আমাদের বাছাইকৃত সেরা শিক্ষণীয় ইসলামিক বইগুলোর চমৎকার অডিও সংস্করণ উপভোগ করুন একদম ফ্রীতে।</p>
@@ -2307,7 +2390,7 @@
           const buyLink = bookCard ? (bookCard.dataset.bookLink || "#") : "#";
 
           // Load and display in modal
-          modalAudioTitle.textContent = `প্লে হচ্ছে: ${title.replace(" — অডিওবুক", "")}`;
+          modalAudioTitle.textContent = `প্লে হচ্ছে: ${title}`;
           modalIframePlayer.src = getEmbedUrl(rawLink);
           modalBookRedirectLink.href = buyLink;
 
@@ -2315,7 +2398,7 @@
         }
       });
 
-      // Close Modal logic
+      // Audiobook Close Modal logic
       function closeAudioModal() {
         audioPlayerModal.classList.add("hidden");
         modalIframePlayer.src = ""; // Stops playback immediately
@@ -2328,16 +2411,25 @@
         }
       });
 
-      // Dynamic database array consisting of 6 best-selling deal books including image_150627.jpg
+      // Dynamic database array consisting of best-selling deal books including image_150627.jpg
       const dealBooks = [
         {
           title: "সীরাতুর রাসূল (ছাঃ)",
-          author: "মুহাম্মদ আসادুল্লাহ আল-গালিব",
+          author: "মুহাম্মদ আসাদুল্লাহ আল-গালিব",
           cover: "image_150627.jpg", // VERBATIM REFERENCE TO ASSET
           link: "https://rkmri.co/eNTNEMpEEe0T/",
           desc: "রাসূলুল্লাহ ﷺ-এর জীবন, আদর্শ ও দাওয়াতের গতিধারাকে সম্পূর্ণ বিশুদ্ধ কুরআন ও ছহীহ হাদিসের আলোকে বস্তুনিষ্ঠভাবে উপস্থাপন করা হয়েছে এই অমর গ্রন্থে। সিরাত অধ্যয়নের জন্য এটি অন্যতম শ্রেষ্ঠ নির্ভরযোগ্য বই।",
           rating: "⭐⭐⭐⭐⭐",
           sales: "১০,০০০+ কপি বিক্রিত"
+        },
+        {
+          title: "সাহাবায়ে কেরামের ঈমানদীপ্ত জীবন - ১ম খণ্ড",
+          author: "ড. আব্দুর রহমান রাফাত পাশা রহ | অনুবাদ: মাওলানা মাসউদুর রহমান",
+          cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQx-F-A01l6CGG2UE9lbnUUXT-cZ9V6gZJcixGZcq2mZl8psXkkC7cCGUUp10_ndF8il6dIhxEeMfCs6uxwW-dOhyUS8EC5OVEA0NDv6WaBfhnqwfpH03eaYiiWQ02DMbF6eyq4DiBOw8peIgscprOyIIWA2X3s8Z_MVgJs5VsJ4Py9w606ijIkMySwQ/w420-h640/images%2520(5).jpg",
+          link: "https://rkmri.co/N3NeAe3SE2AM/",
+          desc: "সাহাবায়ে কেরামের সোনালী যুগের পরম ত্যাগ, সত্যের পথে অটল থাকা ও ঈমানদীপ্ত চমকপ্রদ জীবনগাথা। রাসূলুল্লাহ ﷺ-এর সূর্যসন্তানদের জীবনচরিত জানতে এটি এক অনন্য গ্রন্থ।",
+          rating: "⭐⭐⭐⭐⭐",
+          sales: "৮,০০০+ কপি বিক্রিত"
         },
         {
           title: "নবীদের কাহিনী-১",
